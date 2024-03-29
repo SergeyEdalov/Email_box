@@ -1,4 +1,18 @@
 
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using System.Text;
+using User.Abstractions;
+using User.DataBase.Context;
+using User.Mapper;
+using User.RSAKeys;
+using User.Services;
+
 namespace User
 {
     public class Program
@@ -10,7 +24,61 @@ namespace User
 
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddAutoMapper(typeof(UserMapper));
+            builder.Services.AddSwaggerGen(opt =>
+            {
+                opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    In = ParameterLocation.Header,
+                    Description = "Please enter token",
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    BearerFormat = "Token",
+                    Scheme = "bearer"
+                });
+                opt.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        new string[] {}
+                    }
+                });
+            });
+
+            var config = new ConfigurationBuilder();
+            config.AddJsonFile("appsettings.json");
+            var cfg = config.Build();
+
+            builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+            builder.Host.ConfigureContainer<ContainerBuilder>(cb =>
+            {
+                cb.Register(c => new UserContext(cfg.GetConnectionString("db"))).InstancePerDependency();
+            });
+            
+            builder.Services.AddTransient<IUserService, UserService>();
+            builder.Services.AddTransient<IUserAuthenticationService, UserAuthenticationService>();
+
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(o =>
+                {
+                    o.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                        ValidAudience = builder.Configuration["Jwt:Audience"],
+                        //IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+                        IssuerSigningKey = new RsaSecurityKey(RSATools.GetPublicKey())
+                    };
+                });
 
             var app = builder.Build();
 
@@ -25,10 +93,10 @@ namespace User
             app.UseAuthentication();
             app.UseAuthorization();
 
-
             app.MapControllers();
 
             app.Run();
         }
     }
 }
+

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using User.DataBase.DTO;
 using User.DataBase.Entity;
+using User.Models;
 
 namespace User.Mapper
 {
@@ -9,6 +10,9 @@ namespace User.Mapper
         public UserMapper()
         {
             CreateMap<UserEntity, UserDto>(MemberList.Destination).ReverseMap();
+            CreateMap<RoleEntity, RoleDto>(MemberList.Destination).ReverseMap();
+            
+            CreateMap<UserModel, UserDto>(MemberList.Destination).ReverseMap(); //доделать
         }
     }
 }

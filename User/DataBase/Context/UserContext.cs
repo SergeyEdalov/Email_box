@@ -4,11 +4,9 @@ using User.DataBase.Entity;
 
 namespace User.DataBase.Context
 {
-    public class UserContext : DbContext
+    public partial class UserContext : DbContext
     {
         private static string? _connectionString;
-
-        public UserContext() { }
 
         public UserContext(string connectionString)
         {
@@ -16,6 +14,7 @@ namespace User.DataBase.Context
         }
 
         public DbSet<UserEntity> Users { get; set; }
+        public DbSet<RoleEntity> Roles { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -28,16 +27,54 @@ namespace User.DataBase.Context
             modelBuilder.Entity<UserEntity>(entity =>
             {
                 entity.HasKey(x => x.Id)
-                    .HasName("User_id");
+                    .HasName("user_pkey");
                 entity.HasIndex(x => x.Email)
                     .IsUnique();
 
+                entity.ToTable("users");
+
+                entity.Property(x => x.Id)
+                    .HasColumnName("id");
                 entity.Property(e => e.Email)
-                    .HasColumnName("User_login");
-                entity.Property(e => e.Password).IsRequired()
                     .HasMaxLength(255)
-                    .HasColumnName("User_assword");
+                    .HasColumnName("user_login");
+                entity.Property(e => e.Password)
+                    .HasColumnName("user_password");
+
+                entity.Property(e => e.Salt)
+                    .HasColumnName("salt");
+
+                entity.Property(e => e.RoleId).HasConversion<int>();
+
+                //entity.HasOne(x => x.RoleId)
+                //    .WithMany(x => x.Users);
             });
+
+            modelBuilder.Entity<RoleEntity>(entity =>
+            {
+                entity.HasKey(x => x.RoleId)
+                    .HasName("role_id");
+                entity.HasIndex(x => x.Name);
+            });
+
+            modelBuilder.Entity<RoleEntity>()
+                .Property(e => e.RoleId)
+                .HasConversion<int>();
+
+
+            modelBuilder.Entity<RoleEntity>()
+                .HasData
+                (Enum.GetValues(typeof(Role))
+                .Cast<Role>()
+                .Select(e => new RoleEntity
+                {
+                    RoleId = e,
+                    Name = e.ToString()
+                }));
+
+            OnModelCreatingPartial(modelBuilder);
         }
+
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }

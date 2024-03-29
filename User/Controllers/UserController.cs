@@ -1,9 +1,75 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using User.Abstractions;
+using User.DataBase.Entity;
+using User.Models;
 
 namespace User.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class UserController : ControllerBase
     {
+        private readonly IUserService _userService;
 
+        public UserController(IUserService userService)
+        {
+            _userService = userService;
+        }
+
+        [HttpPost]
+        [Route("AddAdmin")]
+        public IActionResult AddAdmin([FromBody] UserModel user)
+        {
+            try
+            {
+                var userId = _userService.AddAdmin(user.UserName, user.Password);
+                return Ok();
+            }
+            catch (Exception ex) { return StatusCode(500, ex.Message); }
+        }
+
+        [HttpPost]
+        [Route("AddUser")]
+        [Authorize(Roles = "Admin")]
+        public IActionResult AddUser([FromBody] UserModel user)
+        {
+            try
+            {
+                var userId = _userService.AddUser(user.UserName, user.Password, (Role)user.Role);
+                return Ok();
+            }
+            catch (Exception ex) { return StatusCode(500, ex.Message); }
+        }
+
+        [HttpGet]
+        [Route("GetListUsers")]
+        [Authorize(Roles = "Admin, User")]
+        public IActionResult GetListUsers()
+        {
+            var users = _userService.GetListUsers();
+            return Ok(users);
+        }
+
+        [HttpDelete]
+        [Route("DeleteUser")]
+        [Authorize(Roles = "Admin")]
+        public IActionResult DeleteUser([FromQuery] UserModel user)
+        {
+            try 
+            { 
+                _userService.DeleteUser(user.UserName);
+                return Ok("User deleted");
+            }
+            catch (Exception ex) { return StatusCode(500, ex.Message); }
+        }
+
+        [HttpGet]
+        [Route("GetIdUser")]
+        [Authorize(Roles = "Admin")]
+        public IActionResult GetIdUser()
+        {
+            return Ok();
+        }
     }
 }

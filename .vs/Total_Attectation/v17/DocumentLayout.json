@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\database\\context\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\database\\context\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,36 +19,44 @@
       "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\database\\entity\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\services\\userauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\services\\userauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\database\\entity\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\database\\entity\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\models\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\models\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\database\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\database\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\message\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|solutionrelative:message\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\abstractions\\icheckinputdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\abstractions\\icheckinputdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\abstractions\\iuserauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\abstractions\\iuserauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\abstractions\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\abstractions\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\database\\entity\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\database\\entity\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,67 +66,123 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\DataBase\\DTO\\UserDto.cs",
+              "RelativeDocumentMoniker": "User\\DataBase\\DTO\\UserDto.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\DataBase\\DTO\\UserDto.cs",
+              "RelativeToolTip": "User\\DataBase\\DTO\\UserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T14:47:12.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "User\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "User\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T14:45:46.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Abstractions\\IUserService.cs",
+              "RelativeDocumentMoniker": "User\\Abstractions\\IUserService.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Abstractions\\IUserService.cs",
+              "RelativeToolTip": "User\\Abstractions\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T13:51:43.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IUserAuthenticationService.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Abstractions\\IUserAuthenticationService.cs",
+              "RelativeDocumentMoniker": "User\\Abstractions\\IUserAuthenticationService.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Abstractions\\IUserAuthenticationService.cs",
+              "RelativeToolTip": "User\\Abstractions\\IUserAuthenticationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T12:46:35.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ICheckInputData.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Abstractions\\ICheckInputData.cs",
+              "RelativeDocumentMoniker": "User\\Abstractions\\ICheckInputData.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Abstractions\\ICheckInputData.cs",
+              "RelativeToolTip": "User\\Abstractions\\ICheckInputData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T12:44:11.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserAuthenticationService.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Services\\UserAuthenticationService.cs",
+              "RelativeDocumentMoniker": "User\\Services\\UserAuthenticationService.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Services\\UserAuthenticationService.cs",
+              "RelativeToolTip": "User\\Services\\UserAuthenticationService.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAA1wCQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T09:23:47.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Role.cs",
               "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\DataBase\\Entity\\Role.cs",
               "RelativeDocumentMoniker": "User\\DataBase\\Entity\\Role.cs",
               "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\DataBase\\Entity\\Role.cs",
               "RelativeToolTip": "User\\DataBase\\Entity\\Role.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAUwAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T15:24:06.093Z",
+              "WhenOpened": "2024-03-28T12:38:36.943Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserEntity.cs",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\DataBase\\Entity\\UserEntity.cs",
-              "RelativeDocumentMoniker": "User\\DataBase\\Entity\\UserEntity.cs",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\DataBase\\Entity\\UserEntity.cs",
-              "RelativeToolTip": "User\\DataBase\\Entity\\UserEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T14:57:59.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "UserContext.cs",
               "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\DataBase\\Context\\UserContext.cs",
               "RelativeDocumentMoniker": "User\\DataBase\\Context\\UserContext.cs",
               "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\DataBase\\Context\\UserContext.cs",
               "RelativeToolTip": "User\\DataBase\\Context\\UserContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAtwBUAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-27T14:57:46.184Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserRole.cs",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Models\\UserRole.cs",
-              "RelativeDocumentMoniker": "User\\Models\\UserRole.cs",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Models\\UserRole.cs",
-              "RelativeToolTip": "User\\Models\\UserRole.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T14:53:01.403Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Models\\LoginModel.cs",
               "RelativeDocumentMoniker": "User\\Models\\LoginModel.cs",
@@ -118,25 +190,58 @@
               "RelativeToolTip": "User\\Models\\LoginModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T14:52:23.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-27T14:52:23.197Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\DataBase\\DTO\\UserDto.cs",
-              "RelativeDocumentMoniker": "User\\DataBase\\DTO\\UserDto.cs",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\DataBase\\DTO\\UserDto.cs",
-              "RelativeToolTip": "User\\DataBase\\DTO\\UserDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Program.cs",
+              "RelativeDocumentMoniker": "User\\Program.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Program.cs",
+              "RelativeToolTip": "User\\Program.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAIAywD0AAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T14:47:30.91Z",
+              "WhenOpened": "2024-03-27T14:43:05.179Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "User\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Controllers\\UserController.cs",
+              "RelativeToolTip": "User\\Controllers\\UserController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAwwD0AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T14:41:48.014Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "552b3323-e9fd-4719-aab8-155c9f64077d",
+        "Display": 0,
+        "X": -5,
+        "Y": 121,
+        "Width": 1290,
+        "Height": 863,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "UserModel.cs",
               "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Models\\UserModel.cs",
               "RelativeDocumentMoniker": "User\\Models\\UserModel.cs",
@@ -146,44 +251,73 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-27T14:46:40.259Z",
               "EditorCaption": ""
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "73f4a2dd-79d7-42b5-b9ba-dcc3df9a114a",
+        "Display": 0,
+        "X": -5,
+        "Y": 136,
+        "Width": 1290,
+        "Height": 863,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Program.cs",
-              "RelativeDocumentMoniker": "User\\Program.cs",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Program.cs",
-              "RelativeToolTip": "User\\Program.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBsAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "UserEntity.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\DataBase\\Entity\\UserEntity.cs",
+              "RelativeDocumentMoniker": "User\\DataBase\\Entity\\UserEntity.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\DataBase\\Entity\\UserEntity.cs",
+              "RelativeToolTip": "User\\DataBase\\Entity\\UserEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T14:43:05.179Z",
+              "WhenOpened": "2024-03-28T12:38:31.832Z",
               "EditorCaption": ""
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "d8b3efb8-a933-4677-8190-1f4d757fbacb",
+        "Display": 0,
+        "X": -55,
+        "Y": 28,
+        "Width": 1422,
+        "Height": 964,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MessageController.cs",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Controllers\\MessageController.cs",
-              "RelativeDocumentMoniker": "Message\\Controllers\\MessageController.cs",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Controllers\\MessageController.cs",
-              "RelativeToolTip": "Message\\Controllers\\MessageController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "User\\Services\\UserService.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Services\\UserService.cs",
+              "RelativeToolTip": "User\\Services\\UserService.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAIwE0AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T14:42:46.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "User\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Controllers\\UserController.cs",
-              "RelativeToolTip": "User\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T14:41:48.014Z",
+              "WhenOpened": "2024-03-28T08:49:41.906Z",
               "EditorCaption": ""
             }
           ]
