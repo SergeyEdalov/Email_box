@@ -1,7 +1,4 @@
-﻿using System.Data;
-using User.Models;
-
-namespace User.DataBase.Entity
+﻿namespace User.DataBase.Entity
 {
     public partial class UserEntity
     {

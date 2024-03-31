@@ -20,7 +20,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.3",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.2",
-          "Swashbuckle.AspNetCore": "6.4.0"
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "TotalAttectation": "1.0.0"
         },
         "runtime": {
           "User.dll": {}
@@ -1006,6 +1007,14 @@
             "fileVersion": "6.0.21.52210"
           }
         }
+      },
+      "TotalAttectation/1.0.0": {
+        "runtime": {
+          "lib/net8.0/CheckUnputDataLibrary.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1637,6 +1646,13 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "TotalAttectation/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sYuVMy12Sah0gZCTWkKNY/6ZvK9kXKbM8of83Iu4A3d4Nkrzd7Z7jTEFbFr6bKdOHQueJ/jTtGqOktuae3Iv8Q==",
+      "path": "totalattectation/1.0.0",
+      "hashPath": "totalattectation.1.0.0.nupkg.sha512"
     }
   }
 }

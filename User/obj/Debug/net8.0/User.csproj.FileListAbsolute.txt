@@ -145,3 +145,4 @@ D:\Study_programmist\Курс. Разработка веб-приложения 
 D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\User\obj\Debug\net8.0\User.pdb
 D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\User\obj\Debug\net8.0\User.genruntimeconfig.cache
 D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\User\obj\Debug\net8.0\ref\User.dll
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\User\bin\Debug\net8.0\CheckUnputDataLibrary.dll

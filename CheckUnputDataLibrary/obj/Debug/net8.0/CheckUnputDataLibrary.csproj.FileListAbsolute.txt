@@ -1,0 +1,12 @@
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\CheckUnputDataLibrary\bin\Debug\net8.0\CheckUnputDataLibrary.deps.json
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\CheckUnputDataLibrary\bin\Debug\net8.0\CheckUnputDataLibrary.dll
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\CheckUnputDataLibrary\bin\Debug\net8.0\CheckUnputDataLibrary.pdb
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\CheckUnputDataLibrary\obj\Debug\net8.0\CheckUnputDataLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\CheckUnputDataLibrary\obj\Debug\net8.0\CheckUnputDataLibrary.AssemblyInfoInputs.cache
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\CheckUnputDataLibrary\obj\Debug\net8.0\CheckUnputDataLibrary.AssemblyInfo.cs
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\CheckUnputDataLibrary\obj\Debug\net8.0\CheckUnputDataLibrary.csproj.CoreCompileInputs.cache
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\CheckUnputDataLibrary\obj\Debug\net8.0\CheckUnputDataLibrary.sourcelink.json
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\CheckUnputDataLibrary\obj\Debug\net8.0\CheckUnputDataLibrary.dll
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\CheckUnputDataLibrary\obj\Debug\net8.0\refint\CheckUnputDataLibrary.dll
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\CheckUnputDataLibrary\obj\Debug\net8.0\CheckUnputDataLibrary.pdb
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\CheckUnputDataLibrary\obj\Debug\net8.0\ref\CheckUnputDataLibrary.dll

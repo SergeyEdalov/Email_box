@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using User.Abstractions;
 using User.Models;
-using User.Services;
 
 namespace User.Controllers
 {
@@ -28,7 +27,7 @@ namespace User.Controllers
             {
                 return Ok(token);
             }
-            return NotFound("Error Authentication");  
+            return NotFound("Error Authentication. Check that the entered data is correct.");  
         }
     }
 }

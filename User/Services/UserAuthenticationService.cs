@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using CheckUnputDataLibrary;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -17,6 +18,7 @@ namespace User.Services
         private readonly UserContext _userContext;
         private readonly IMapper _mapper;
         private readonly IConfiguration? _configuration;
+        private readonly Class1 _libraryCheckData;
         public UserAuthenticationService() { }
 
         public UserAuthenticationService(UserContext userContext, IMapper mapper, IConfiguration? configuration)
@@ -34,26 +36,30 @@ namespace User.Services
 
                 if (entity == null) return "User not found";
 
-                var data = Encoding.UTF8.GetBytes(loginModel.Password).Concat(entity.Salt).ToArray();
-
-                SHA512 shaM = new SHA512Managed();
-
-                var bpassword = shaM.ComputeHash(data);
-
-                if (entity.Password.SequenceEqual(bpassword))
+                if (_libraryCheckData.CheckLengthPassword(loginModel.Password)
+                    && _libraryCheckData.CheckDifficultPassword(loginModel.Password)
+                    && _libraryCheckData.CheckEmail(loginModel.Email))
                 {
-                    var user = _mapper.Map<UserDto>(entity);
-                    return GeneratreToken(user);
 
-                    //_mapper.Map<UserModel>(user); Надо ли?
+                    var data = Encoding.UTF8.GetBytes(loginModel.Password).Concat(entity.Salt).ToArray();
+
+                    SHA512 shaM = new SHA512Managed();
+
+                    var bpassword = shaM.ComputeHash(data);
+
+                    if (entity.Password.SequenceEqual(bpassword))
+                    {
+                        var user = _mapper.Map<UserDto>(entity);
+                        return GeneratreToken(user);
+                    }
+                    else return "Wrong password";
                 }
-                else return "Wrong password";
+                else return "Wrong input data";
             }
         }
 
         private string GeneratreToken(UserDto user)
         {
-            //var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var securityKey = new RsaSecurityKey(RSATools.GetPrivateKey());
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.RsaSha256Signature);
             var claims = new[]

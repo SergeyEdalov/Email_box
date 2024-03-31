@@ -40,14 +40,10 @@ namespace User.DataBase.Context
                     .HasColumnName("user_login");
                 entity.Property(e => e.Password)
                     .HasColumnName("user_password");
-
                 entity.Property(e => e.Salt)
                     .HasColumnName("salt");
 
                 entity.Property(e => e.RoleId).HasConversion<int>();
-
-                //entity.HasOne(x => x.RoleId)
-                //    .WithMany(x => x.Users);
             });
 
             modelBuilder.Entity<RoleEntity>(entity =>
@@ -61,7 +57,6 @@ namespace User.DataBase.Context
                 .Property(e => e.RoleId)
                 .HasConversion<int>();
 
-
             modelBuilder.Entity<RoleEntity>()
                 .HasData
                 (Enum.GetValues(typeof(Role))
@@ -71,10 +66,8 @@ namespace User.DataBase.Context
                     RoleId = e,
                     Name = e.ToString()
                 }));
-
             OnModelCreatingPartial(modelBuilder);
         }
-
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }

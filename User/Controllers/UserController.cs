@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using User.Abstractions;
-using User.DataBase.Entity;
 using User.Models;
 
 namespace User.Controllers
@@ -23,7 +22,7 @@ namespace User.Controllers
         {
             try
             {
-                var userId = _userService.AddAdmin(user.UserName, user.Password);
+                var userId = _userService.AddAdmin(user);
                 return Ok();
             }
             catch (Exception ex) { return StatusCode(500, ex.Message); }
@@ -36,7 +35,7 @@ namespace User.Controllers
         {
             try
             {
-                var userId = _userService.AddUser(user.UserName, user.Password, (Role)user.Role);
+                var userId = _userService.AddUser(user);
                 return Ok();
             }
             catch (Exception ex) { return StatusCode(500, ex.Message); }
@@ -67,9 +66,14 @@ namespace User.Controllers
         [HttpGet]
         [Route("GetIdUser")]
         [Authorize(Roles = "Admin")]
-        public IActionResult GetIdUser()
+        public IActionResult GetIdUser(string token)
         {
-            return Ok();
+            try
+            {
+                Guid userID = _userService.GetIdIserFromToken(token);
+                return Ok(userID);
+            }
+            catch (Exception ex) { return StatusCode(500, ex.Message); }
         }
     }
 }

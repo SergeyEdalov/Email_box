@@ -1,11 +1,14 @@
 ﻿using AutoMapper;
 using System.Data;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using User.Abstractions;
 using User.DataBase.Context;
 using User.DataBase.DTO;
 using User.DataBase.Entity;
+using User.Models;
 
 namespace User.Services
 {
@@ -21,39 +24,39 @@ namespace User.Services
             _mapper = mapper;
             _userContext = userContext;
         }
-        public Guid AddAdmin(string email, string password)
+        public Guid AddAdmin(UserModel userModel)
         {
             using (_userContext)
             {
                 if (_userContext != null) { throw new Exception("There is already have users in system"); }
 
-                var userDb = _mapper.Map<UserEntity>(CreateUser(email, password, Role.Admin));
+                userModel.Role = UserRole.Admin;
+
+                var userDb = _mapper.Map<UserEntity>(CreateUser(userModel));
 
                 _userContext.Add(userDb);
                 _userContext.SaveChanges();
-
                 return userDb.Id;
             }
         }
 
-        public Guid AddUser(string email, string password, Role role)
+        public Guid AddUser(UserModel userModel)
         {
             using (_userContext)
             {
-                if (role == Role.Admin)
+                if (userModel.Role == 0)
                 {
-                    var count = _userContext.Users.Count(x => x.RoleId == Role.Admin);
+                    var count = _userContext.Users.Count(x => x.RoleId == 0);
                     if (count > 0) { throw new Exception("Second Admin!"); }
                 }
-                if (_userContext.Users.Select(x => x.Email.Equals(email)).FirstOrDefault())
+                if (_userContext.Users.Select(x => x.Email.Equals(userModel.UserName)).FirstOrDefault())
                 {
                     throw new Exception("Email is already exsits");
                 }
-                var userDb = _mapper.Map<UserEntity>(CreateUser(email, password, role));
+                var userDb = _mapper.Map<UserEntity>(CreateUser(userModel));
 
                 _userContext.Add(userDb);
                 _userContext.SaveChanges();
-
                 return userDb.Id;
             }
         }
@@ -66,17 +69,16 @@ namespace User.Services
 
                 if (deleteUser != null)
                 {
-                    if (deleteUser.RoleId == Role.Admin)
+                    if (deleteUser.RoleId == 0)
                     {
                         throw new Exception("You can`t delete yourself");
                     }
-                    _userContext.Users.Remove(_mapper.Map<UserEntity>(deleteUser));
+                    _userContext.Users.Remove(deleteUser);
                     _userContext.SaveChanges();
                 }
                 else { throw new Exception("User not found"); }
             }
         }
-
         public IEnumerable<UserDto> GetListUsers()
         {
             using (_userContext)
@@ -85,19 +87,30 @@ namespace User.Services
                 return listUsers;
             }
         }
-
-        private static UserDto CreateUser(string email, string password, Role role)
+        public Guid GetIdIserFromToken(string token)
         {
-            var userDto = new UserDto() { Id = new Guid(), Email = email, Salt = new byte[16], RoleId = role };
+            var handler = new JwtSecurityTokenHandler();
+            var tokenJWt = handler.ReadJwtToken(token);
+            var claim = tokenJWt.Claims.FirstOrDefault(x => x.Type.Equals(ClaimTypes.NameIdentifier));
+
+            Guid userId = Guid.Parse(claim.Value);
+            return userId;
+        }
+
+        private UserDto CreateUser(UserModel userModel)
+        {
+            var userDto = _mapper.Map<UserDto>(userModel);
+            userDto.Id = new Guid();
+            userDto.Salt = new byte[16];
+            //var userDto = new UserDto() { Id = new Guid(), Email = email, Salt = new byte[16], RoleId = role };
 
             new Random().NextBytes(userDto.Salt);
 
-            var data = Encoding.UTF8.GetBytes(password).Concat(userDto.Salt).ToArray();
+            var data = userDto.Password.Concat(userDto.Salt).ToArray();
 
             SHA512 shaM = new SHA512Managed();
 
             userDto.Password = shaM.ComputeHash(data);
-
             return userDto;
         }
     }

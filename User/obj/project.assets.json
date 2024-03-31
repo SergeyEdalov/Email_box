@@ -1732,6 +1732,15 @@
             "rid": "win"
           }
         }
+      },
+      "TotalAttectation/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CheckUnputDataLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/CheckUnputDataLibrary.dll": {}
+        }
       }
     }
   },
@@ -4678,6 +4687,17 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "TotalAttectation/1.0.0": {
+      "sha512": "sYuVMy12Sah0gZCTWkKNY/6ZvK9kXKbM8of83Iu4A3d4Nkrzd7Z7jTEFbFr6bKdOHQueJ/jTtGqOktuae3Iv8Q==",
+      "type": "package",
+      "path": "totalattectation/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net8.0/CheckUnputDataLibrary.dll",
+        "totalattectation.1.0.0.nupkg.sha512",
+        "totalattectation.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -4694,7 +4714,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.3",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.2",
-      "Swashbuckle.AspNetCore >= 6.4.0"
+      "Swashbuckle.AspNetCore >= 6.4.0",
+      "TotalAttectation >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4718,6 +4739,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "D:\\nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4796,6 +4818,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.4.0, )"
+          },
+          "TotalAttectation": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [
