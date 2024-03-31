@@ -1,4 +1,3 @@
-
 namespace Message
 {
     public class Program
