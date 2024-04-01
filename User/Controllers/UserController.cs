@@ -43,7 +43,7 @@ namespace User.Controllers
 
         [HttpGet]
         [Route("GetListUsers")]
-        [Authorize(Roles = "Admin, User")]
+        //[Authorize(Roles = "Admin, User")]
         public IActionResult GetListUsers()
         {
             var users = _userService.GetListUsers();

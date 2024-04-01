@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
+using CheckUnputDataLibrary;
 using System.Data;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
-using System.Text;
 using User.Abstractions;
 using User.DataBase.Context;
 using User.DataBase.DTO;
@@ -16,6 +16,7 @@ namespace User.Services
     {
         private readonly IMapper _mapper;
         private readonly UserContext _userContext;
+        private readonly Class1 _libraryCheckData;
 
         public UserService() { }
 
@@ -28,7 +29,9 @@ namespace User.Services
         {
             using (_userContext)
             {
-                if (_userContext != null) { throw new Exception("There is already have users in system"); }
+                var count = _userContext.Users.Count();
+
+                if (count != 0) { throw new Exception("There is already have users in system"); }
 
                 userModel.Role = UserRole.Admin;
 
@@ -99,19 +102,25 @@ namespace User.Services
 
         private UserDto CreateUser(UserModel userModel)
         {
-            var userDto = _mapper.Map<UserDto>(userModel);
-            userDto.Id = new Guid();
-            userDto.Salt = new byte[16];
-            //var userDto = new UserDto() { Id = new Guid(), Email = email, Salt = new byte[16], RoleId = role };
+            //if (_libraryCheckData.CheckLengthPassword(userModel.Password)
+            //        && _libraryCheckData.CheckDifficultPassword(userModel.Password)
+            //        && _libraryCheckData.CheckEmail(userModel.UserName))
+            //{
+                var userDto = _mapper.Map<UserDto>(userModel);
+                userDto.Id = new Guid();
+                userDto.Salt = new byte[16];
+                //var userDto = new UserDto() { Id = new Guid(), Email = email, Salt = new byte[16], RoleId = role };
 
-            new Random().NextBytes(userDto.Salt);
+                new Random().NextBytes(userDto.Salt);
 
-            var data = userDto.Password.Concat(userDto.Salt).ToArray();
+                var data = userDto.Password.Concat(userDto.Salt).ToArray();
 
-            SHA512 shaM = new SHA512Managed();
+                SHA512 shaM = new SHA512Managed();
 
-            userDto.Password = shaM.ComputeHash(data);
-            return userDto;
+                userDto.Password = shaM.ComputeHash(data);
+                return userDto;
+            //}
+            //else throw new Exception("Wrong input data");
         }
     }
 }

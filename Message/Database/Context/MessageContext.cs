@@ -1,6 +1,45 @@
-﻿namespace Message.Database.Context
+﻿using Message.Database.Entity;
+using Microsoft.EntityFrameworkCore;
+
+namespace Message.Database.Context
 {
-    public class MessageContext
+    public class MessageContext : DbContext
     {
+        private static string? _connectionString;
+
+        public MessageContext(string connectionString)
+        {
+            _connectionString = connectionString;
+        }
+
+        public DbSet<MessageEntity> Messages { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseNpgsql(_connectionString).UseLazyLoadingProxies();
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<MessageEntity>(entity =>
+            {
+                entity.HasKey(x => x.Id)
+                    .HasName("message_key");
+
+                entity.ToTable("messages");
+
+                entity.Property(x => x.Id)
+                    .HasColumnName("id");
+                entity.Property(e => e.Body)
+                    .HasColumnName("message");
+                entity.Property(e => e.FromUserId)
+                    .HasColumnName("fromUserId");
+                entity.Property(e => e.TargetUserId)
+                    .HasColumnName("targetUserId");
+                entity.Property(e => e.IsDelivery)
+                    .HasColumnName("status");
+            });
+        }
     }
 }

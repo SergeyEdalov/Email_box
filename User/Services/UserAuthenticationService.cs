@@ -21,11 +21,12 @@ namespace User.Services
         private readonly Class1 _libraryCheckData;
         public UserAuthenticationService() { }
 
-        public UserAuthenticationService(UserContext userContext, IMapper mapper, IConfiguration? configuration)
+        public UserAuthenticationService(UserContext userContext, IMapper mapper, IConfiguration? configuration, Class1 libraryCheckData)
         {
             _userContext = userContext;
             _mapper = mapper;
             _configuration = configuration;
+            _libraryCheckData = libraryCheckData;
         }
         public string Authenticate(LoginModel loginModel)
         {
@@ -67,26 +68,27 @@ namespace User.Services
                     new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                     new Claim(ClaimTypes.Role, user.RoleId.ToString())
                 };
-            var token = new JwtSecurityToken(_configuration["Jwt:Issuer"],_configuration["Jwt:Audience"],
+            var token = new JwtSecurityToken(_configuration["Jwt:Issuer"], _configuration["Jwt:Audience"],
                 claims,
                 expires: DateTime.Now.AddMinutes(60),
                 signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
-
-        public string AuthenticateMock(LoginModel loginModel)
-        {
-            var user = new UserDto();
-            if (loginModel.Email == "admin" && loginModel.Password == "password")
-            {
-                user = new UserDto { Password = Encoding.UTF8.GetBytes(loginModel.Password), Email = loginModel.Email, RoleId = DataBase.Entity.Role.Admin };
-            }
-            if (loginModel.Email == "user" && loginModel.Password == "super")
-            {
-                user = new UserDto { Password = Encoding.UTF8.GetBytes(loginModel.Password), Email = loginModel.Email, RoleId = DataBase.Entity.Role.User };
-            }
-            return GeneratreToken(user);
-        }
+        /** Заглушка
+                public string AuthenticateMock(LoginModel loginModel)
+                {
+                    var user = new UserDto();
+                    if (loginModel.Email == "admin" && loginModel.Password == "password")
+                    {
+                        user = new UserDto { Password = Encoding.UTF8.GetBytes(loginModel.Password), Email = loginModel.Email, RoleId = DataBase.Entity.Role.Admin };
+                    }
+                    if (loginModel.Email == "user" && loginModel.Password == "super")
+                    {
+                        user = new UserDto { Password = Encoding.UTF8.GetBytes(loginModel.Password), Email = loginModel.Email, RoleId = DataBase.Entity.Role.User };
+                    }
+                    return GeneratreToken(user);
+                }
+        */
     }
 }

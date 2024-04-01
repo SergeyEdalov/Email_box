@@ -2,7 +2,7 @@
 {
     public interface IMessageService
     {
-        public string GetMessage();
-        public void SentMessage(string message);
+        public IEnumerable<string> GetMessage();
+        public void SendMessage(string message, Guid fromUserId, Guid targetUserId);
     }
 }

@@ -18,10 +18,10 @@ namespace User.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public ActionResult Login([FromBody] LoginModel loginModel)
+        public IActionResult Login([FromBody] LoginModel loginModel)
         {
-            //var token = _userAuthenticationService.Authenticate(loginModel);
-            var token = _userAuthenticationService.AuthenticateMock(loginModel); //Заглушка
+            var token = _userAuthenticationService.Authenticate(loginModel);
+            //var token = _userAuthenticationService.AuthenticateMock(loginModel); //Заглушка
 
             if (token != null)
             {
