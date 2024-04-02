@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
 using User.Abstractions;
 using User.Models;
@@ -13,9 +12,8 @@ namespace User.Controllers
     {
         private readonly IUserAuthenticationService _userAuthenticationService; 
 
-        public LoginController(IUserAuthenticationService userAuthenticationService) //Почему входящий интерфейс null?
+        public LoginController(IUserAuthenticationService userAuthenticationService)
         {
-            if (userAuthenticationService == null) { throw new Exception("Constructor empty"); }
             _userAuthenticationService = userAuthenticationService;
         }
 

@@ -12,11 +12,11 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("Geekbrains")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0608d415f922028a9f2213444d51daa5dd2058b")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1+7bf6ca5f7a9b78e69c8b055c6c890df99947b1fc")]
 [assembly: System.Reflection.AssemblyProductAttribute("CheckUnputDataLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CheckUnputDataLibrary")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.1.0")]
 
 // Создано классом WriteCodeFragment MSBuild.
 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9acvT7o4l2jSDEoq7uRCShlbqwtBN7tBN1grM8TGudYUWFJxU9WYw7Qngi4V3L6FJxlOhAAEY3Tbcg1I5uPCjw==",
+  "dgSpecHash": "HnJHDw+AA4jcn/qVQ8BWkxcBReUCNI1vd3rVjxot3Jhc+tk8vKUL53ta3CrWLl89Fn1D5c7ryrPnqzIWwxZOKw==",
   "success": true,
   "projectFilePath": "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\User\\User.csproj",
   "expectedPackageFiles": [
@@ -93,7 +93,7 @@
     "C:\\Users\\Серж\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512",
     "C:\\Users\\Серж\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Серж\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
-    "C:\\Users\\Серж\\.nuget\\packages\\totalattectation\\1.0.0\\totalattectation.1.0.0.nupkg.sha512"
+    "C:\\Users\\Серж\\.nuget\\packages\\totalattectation_1\\1.0.1\\totalattectation_1.1.0.1.nupkg.sha512"
   ],
   "logs": []
 }

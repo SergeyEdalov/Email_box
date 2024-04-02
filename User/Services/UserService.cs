@@ -16,7 +16,6 @@ namespace User.Services
     {
         private readonly IMapper _mapper;
         private readonly UserContext _userContext;
-        private readonly Class1 _libraryCheckData;
 
         public UserService() { }
 
@@ -27,68 +26,56 @@ namespace User.Services
         }
         public Guid AddAdmin(UserModel userModel)
         {
-            using (_userContext)
-            {
-                var count = _userContext.Users.Count();
+            var count = _userContext.Users.Count();
 
-                if (count != 0) { throw new Exception("There is already have users in system"); }
+            if (count != 0) { throw new Exception("There is already have users in system"); }
 
-                userModel.Role = UserRole.Admin;
+            userModel.Role = UserRole.Admin;
 
-                var userDb = _mapper.Map<UserEntity>(CreateUser(userModel));
+            var userDb = _mapper.Map<UserEntity>(CreateUser(userModel));
 
-                _userContext.Add(userDb);
-                _userContext.SaveChanges();
-                return userDb.Id;
-            }
+            _userContext.Add(userDb);
+            _userContext.SaveChanges();
+            return userDb.Id;
         }
 
         public Guid AddUser(UserModel userModel)
         {
-            using (_userContext)
+            if (userModel.Role == 0)
             {
-                if (userModel.Role == 0)
-                {
-                    var count = _userContext.Users.Count(x => x.RoleId == 0);
-                    if (count > 0) { throw new Exception("Second Admin!"); }
-                }
-                if (_userContext.Users.Select(x => x.Email.Equals(userModel.UserName)).FirstOrDefault())
-                {
-                    throw new Exception("Email is already exsits");
-                }
-                var userDb = _mapper.Map<UserEntity>(CreateUser(userModel));
-
-                _userContext.Add(userDb);
-                _userContext.SaveChanges();
-                return userDb.Id;
+                var count = _userContext.Users.Count(x => x.RoleId == 0);
+                if (count > 0) { throw new Exception("Second Admin!"); }
             }
+            if (_userContext.Users.Select(x => x.Email.Contains(userModel.UserName)).FirstOrDefault())
+            {
+                throw new Exception("Email is already exsits");
+            }
+            var userDb = _mapper.Map<UserEntity>(CreateUser(userModel));
+
+            _userContext.Add(userDb);
+            _userContext.SaveChanges();
+            return userDb.Id;
         }
 
         public void DeleteUser(string userName)
         {
-            using (_userContext)
-            {
-                var deleteUser = _userContext.Users.Where(x => x.Email.Equals(userName)).FirstOrDefault();
+            var deleteUser = _userContext.Users.Where(x => x.Email.Equals(userName)).FirstOrDefault();
 
-                if (deleteUser != null)
+            if (deleteUser != null)
+            {
+                if (deleteUser.RoleId == 0)
                 {
-                    if (deleteUser.RoleId == 0)
-                    {
-                        throw new Exception("You can`t delete yourself");
-                    }
-                    _userContext.Users.Remove(deleteUser);
-                    _userContext.SaveChanges();
+                    throw new Exception("You can`t delete yourself");
                 }
-                else { throw new Exception("User not found"); }
+                _userContext.Users.Remove(deleteUser);
+                _userContext.SaveChanges();
             }
+            else { throw new Exception("User not found"); }
         }
         public IEnumerable<UserDto> GetListUsers()
         {
-            using (_userContext)
-            {
-                var listUsers = _userContext.Users.Select(x => _mapper.Map<UserDto>(x)).ToList();
-                return listUsers;
-            }
+            var listUsers = _userContext.Users.Select(x => _mapper.Map<UserDto>(x)).ToList();
+            return listUsers;
         }
         public Guid GetIdIserFromToken(string token)
         {
@@ -102,14 +89,13 @@ namespace User.Services
 
         private UserDto CreateUser(UserModel userModel)
         {
-            //if (_libraryCheckData.CheckLengthPassword(userModel.Password)
-            //        && _libraryCheckData.CheckDifficultPassword(userModel.Password)
-            //        && _libraryCheckData.CheckEmail(userModel.UserName))
-            //{
+            if (Class1.CheckLengthPassword(userModel.Password)
+                    && Class1.CheckDifficultPassword(userModel.Password)
+                    && Class1.CheckEmail(userModel.UserName))
+            {
                 var userDto = _mapper.Map<UserDto>(userModel);
                 userDto.Id = new Guid();
                 userDto.Salt = new byte[16];
-                //var userDto = new UserDto() { Id = new Guid(), Email = email, Salt = new byte[16], RoleId = role };
 
                 new Random().NextBytes(userDto.Salt);
 
@@ -119,8 +105,8 @@ namespace User.Services
 
                 userDto.Password = shaM.ComputeHash(data);
                 return userDto;
-            //}
-            //else throw new Exception("Wrong input data");
+            }
+            else throw new Exception("Wrong input data");
         }
     }
 }

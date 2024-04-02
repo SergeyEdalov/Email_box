@@ -18,46 +18,41 @@ namespace User.Services
         private readonly UserContext _userContext;
         private readonly IMapper _mapper;
         private readonly IConfiguration? _configuration;
-        private readonly Class1 _libraryCheckData;
-        
+
         public UserAuthenticationService() { }
 
-        public UserAuthenticationService(UserContext userContext, IMapper mapper, IConfiguration? configuration, Class1 libraryCheckData)
+        public UserAuthenticationService(UserContext userContext, IMapper mapper, IConfiguration? configuration)
         {
             _userContext = userContext;
             _mapper = mapper;
             _configuration = configuration;
-            _libraryCheckData = libraryCheckData;
         }
         public string Authenticate(LoginModel loginModel)
         {
-            using (_userContext)
+            var entity = _userContext.Users
+                .FirstOrDefault(x => x.Email.Equals(loginModel.Email));
+
+            if (entity == null) return "User not found";
+
+            if (Class1.CheckLengthPassword(loginModel.Password)
+                && Class1.CheckDifficultPassword(loginModel.Password)
+                && Class1.CheckEmail(loginModel.Email))
             {
-                var entity = _userContext.Users
-                    .FirstOrDefault(x => x.Email.Equals(loginModel.Email));
 
-                if (entity == null) return "User not found";
+                var data = Encoding.UTF8.GetBytes(loginModel.Password).Concat(entity.Salt).ToArray();
 
-                if (_libraryCheckData.CheckLengthPassword(loginModel.Password)
-                    && _libraryCheckData.CheckDifficultPassword(loginModel.Password)
-                    && _libraryCheckData.CheckEmail(loginModel.Email))
+                SHA512 shaM = new SHA512Managed();
+
+                var bpassword = shaM.ComputeHash(data);
+
+                if (entity.Password.SequenceEqual(bpassword))
                 {
-
-                    var data = Encoding.UTF8.GetBytes(loginModel.Password).Concat(entity.Salt).ToArray();
-
-                    SHA512 shaM = new SHA512Managed();
-
-                    var bpassword = shaM.ComputeHash(data);
-
-                    if (entity.Password.SequenceEqual(bpassword))
-                    {
-                        var user = _mapper.Map<UserDto>(entity);
-                        return GeneratreToken(user);
-                    }
-                    else return "Wrong password";
+                    var user = _mapper.Map<UserDto>(entity);
+                    return GeneratreToken(user);
                 }
-                else return "Wrong input data";
+                else return "Wrong password";
             }
+            else return "Wrong input data";
         }
 
         private string GeneratreToken(UserDto user)

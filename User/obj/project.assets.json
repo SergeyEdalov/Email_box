@@ -1733,7 +1733,7 @@
           }
         }
       },
-      "TotalAttectation/1.0.0": {
+      "TotalAttectation_1/1.0.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/CheckUnputDataLibrary.dll": {}
@@ -4688,15 +4688,15 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "TotalAttectation/1.0.0": {
-      "sha512": "sYuVMy12Sah0gZCTWkKNY/6ZvK9kXKbM8of83Iu4A3d4Nkrzd7Z7jTEFbFr6bKdOHQueJ/jTtGqOktuae3Iv8Q==",
+    "TotalAttectation_1/1.0.1": {
+      "sha512": "gPW1lMt08eGQoN65wI/y4uhvYSx7elqfvHjm3EWa5kEXISVKRjShPEpaXwkXP0x7PgO9htTBL6ECQcqneez8Mw==",
       "type": "package",
-      "path": "totalattectation/1.0.0",
+      "path": "totalattectation_1/1.0.1",
       "files": [
         ".nupkg.metadata",
         "lib/net8.0/CheckUnputDataLibrary.dll",
-        "totalattectation.1.0.0.nupkg.sha512",
-        "totalattectation.nuspec"
+        "totalattectation_1.1.0.1.nupkg.sha512",
+        "totalattectation_1.nuspec"
       ]
     }
   },
@@ -4715,7 +4715,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.3",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.2",
       "Swashbuckle.AspNetCore >= 6.4.0",
-      "TotalAttectation >= 1.0.0"
+      "TotalAttectation_1 >= 1.0.1"
     ]
   },
   "packageFolders": {
@@ -4819,9 +4819,9 @@
             "target": "Package",
             "version": "[6.4.0, )"
           },
-          "TotalAttectation": {
+          "TotalAttectation_1": {
             "target": "Package",
-            "version": "[1.0.0, )"
+            "version": "[1.0.1, )"
           }
         },
         "imports": [

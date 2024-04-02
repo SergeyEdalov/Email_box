@@ -5,10 +5,10 @@
   },
   "projects": {
     "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\CheckUnputDataLibrary\\CheckUnputDataLibrary.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "restore": {
         "projectUniqueName": "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\CheckUnputDataLibrary\\CheckUnputDataLibrary.csproj",
-        "projectName": "TotalAttectation",
+        "projectName": "TotalAttectation_1",
         "projectPath": "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\CheckUnputDataLibrary\\CheckUnputDataLibrary.csproj",
         "packagesPath": "C:\\Users\\Серж\\.nuget\\packages\\",
         "outputPath": "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\CheckUnputDataLibrary\\obj\\",

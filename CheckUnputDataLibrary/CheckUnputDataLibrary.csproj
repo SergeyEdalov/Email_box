@@ -4,8 +4,8 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<PackageId>TotalAttectation</PackageId>
-		<Version>1.0.0</Version>
+		<PackageId>TotalAttectation_1</PackageId>
+		<Version>1.0.1</Version>
 		<Authors>EdalovSergey</Authors>
 		<Company>Geekbrains</Company>
 	</PropertyGroup>

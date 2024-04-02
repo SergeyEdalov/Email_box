@@ -25,7 +25,6 @@ namespace Message.Services
             {
                 var messageList = _messageContext.Messages
                     .Where(x => x.IsDelivery == false)
-                    //.Select(x => _mapper.Map<MessageDto>(x))
                     .ToList();
 
                 if (messageList.Count == 0) { throw new Exception("There is no new message"); }

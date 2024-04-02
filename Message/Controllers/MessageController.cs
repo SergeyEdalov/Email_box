@@ -17,7 +17,7 @@ namespace Message.Controllers
 
         [HttpGet]
         [Route("GetMessage")]
-        //[Authorize]
+        [Authorize]
         public IActionResult GetMessage()
         {
             try
@@ -30,7 +30,7 @@ namespace Message.Controllers
 
         [HttpPost]
         [Route("SendMessage")]
-        //[Authorize]
+        [Authorize]
         public IActionResult SendMessage([FromQuery] string message, Guid fromUserId, Guid targetUserId)
         {
             try

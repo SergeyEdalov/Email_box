@@ -1,0 +1,19 @@
+{
+  "userName": "admin@mail.ru",
+  "password": "Qwerty1)",
+  "role": 0
+}
+
+{
+  "userName": "bob@mail.ru",
+  "password": "Hh45!4",
+  "role": 1
+}
+e3715904-b3fb-4b59-8df3-b7e0d7703553
+
+{
+  "userName": "masha@mail.ru",
+  "password": "UIop!23",
+  "role": 1
+}
+e3b7f9a9-9cce-40e0-8725-236b17435564

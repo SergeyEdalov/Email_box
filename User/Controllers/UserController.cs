@@ -30,7 +30,7 @@ namespace User.Controllers
 
         [HttpPost]
         [Route("AddUser")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public IActionResult AddUser([FromBody] UserModel user)
         {
             try
@@ -43,7 +43,7 @@ namespace User.Controllers
 
         [HttpGet]
         [Route("GetListUsers")]
-        //[Authorize(Roles = "Admin, User")]
+        [Authorize(Roles = "Admin, User")]
         public IActionResult GetListUsers()
         {
             var users = _userService.GetListUsers();
@@ -52,7 +52,7 @@ namespace User.Controllers
 
         [HttpDelete]
         [Route("DeleteUser")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public IActionResult DeleteUser([FromQuery] UserModel user)
         {
             try 
@@ -65,7 +65,7 @@ namespace User.Controllers
 
         [HttpGet]
         [Route("GetIdUser")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public IActionResult GetIdUser(string token)
         {
             try

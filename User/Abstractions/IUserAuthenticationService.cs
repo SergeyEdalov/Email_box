@@ -6,6 +6,6 @@ namespace User.Abstractions
     {
         public string Authenticate (LoginModel loginModel);
 
-        //public string AuthenticateMock(LoginModel loginModel);
+        //public string AuthenticateMock(LoginModel loginModel); //Заглушка
     }
 }

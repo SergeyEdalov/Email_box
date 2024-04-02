@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>TotalAttectation_1</id>
+    <version>1.0.1</version>
+    <authors>EdalovSergey</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="7bf6ca5f7a9b78e69c8b055c6c890df99947b1fc" />
+    <dependencies>
+      <group targetFramework="net8.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\CheckUnputDataLibrary\bin\Release\net8.0\CheckUnputDataLibrary.dll" target="lib\net8.0\CheckUnputDataLibrary.dll" />
+  </files>
+</package>
