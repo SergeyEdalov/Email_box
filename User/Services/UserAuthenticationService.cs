@@ -19,6 +19,7 @@ namespace User.Services
         private readonly IMapper _mapper;
         private readonly IConfiguration? _configuration;
         private readonly Class1 _libraryCheckData;
+        
         public UserAuthenticationService() { }
 
         public UserAuthenticationService(UserContext userContext, IMapper mapper, IConfiguration? configuration, Class1 libraryCheckData)

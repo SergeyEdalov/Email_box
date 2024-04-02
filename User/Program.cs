@@ -56,11 +56,13 @@ namespace User
             builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
             builder.Host.ConfigureContainer<ContainerBuilder>(cb =>
             {
+                cb.RegisterType<UserService>().As<IUserService>();
+                cb.RegisterType<UserAuthenticationService>().As<IUserAuthenticationService>();
                 cb.Register(c => new UserContext(cfg.GetConnectionString("db"))).InstancePerDependency();
             });
             
-            builder.Services.AddTransient<IUserService, UserService>();
-            builder.Services.AddTransient<IUserAuthenticationService, UserAuthenticationService>();
+            //builder.Services.AddSingleton<IUserAuthenticationService, UserAuthenticationService>();
+            //builder.Services.AddSingleton<IUserService, UserService>();
 
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(o =>

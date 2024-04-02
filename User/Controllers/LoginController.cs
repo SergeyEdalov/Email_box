@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
 using User.Abstractions;
 using User.Models;
+using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
 namespace User.Controllers
 {
@@ -9,15 +11,17 @@ namespace User.Controllers
     [Route("[controller]")]
     public class LoginController : ControllerBase
     {
-        private readonly IUserAuthenticationService _userAuthenticationService;
+        private readonly IUserAuthenticationService _userAuthenticationService; 
 
-        public LoginController(IUserAuthenticationService userAuthenticationService)
+        public LoginController(IUserAuthenticationService userAuthenticationService) //Почему входящий интерфейс null?
         {
+            if (userAuthenticationService == null) { throw new Exception("Constructor empty"); }
             _userAuthenticationService = userAuthenticationService;
         }
 
         [AllowAnonymous]
         [HttpPost]
+        [Route("Login")]
         public IActionResult Login([FromBody] LoginModel loginModel)
         {
             var token = _userAuthenticationService.Authenticate(loginModel);

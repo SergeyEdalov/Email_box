@@ -23,20 +23,24 @@ namespace Message.Services
         {
             using (_messageContext)
             {
-                var messageDtoList = _messageContext.Messages
+                var messageList = _messageContext.Messages
                     .Where(x => x.IsDelivery == false)
-                    .Select(x => _mapper.Map<MessageDto>(x))
+                    //.Select(x => _mapper.Map<MessageDto>(x))
                     .ToList();
 
-                if (messageDtoList.Count == 0) { throw new Exception("There is no new message"); }
+                if (messageList.Count == 0) { throw new Exception("There is no new message"); }
 
                 var listMessage = new List<string>();
-
-                foreach (var item in messageDtoList)
+                
+                foreach (var item in messageList)
                 {
-                    listMessage.Add(item.Body);
+                    var messageDto = _mapper.Map<MessageDto>(item);
+                    listMessage.Add(messageDto.Body);
+
                     item.IsDelivery = true;
+                    _messageContext.Update(item);
                 }
+                _messageContext.SaveChanges();
                 return listMessage;
             }
         }
@@ -50,7 +54,7 @@ namespace Message.Services
                     Id = new Guid(),
                     Body = message,
                     FromUserId = fromUserId,
-                    TargetUserId = new Guid(),
+                    TargetUserId = targetUserId,
                     IsDelivery = false
                 };
                 _messageContext.Add (_mapper.Map<MessageEntity>(messageDto));
