@@ -20,16 +20,16 @@ namespace User.Controllers
         [AllowAnonymous]
         [HttpPost]
         [Route("Login")]
-        public IActionResult Login([FromBody] LoginModel loginModel)
+        public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
         {
-            var token = _userAuthenticationService.Authenticate(loginModel);
+            var token = await _userAuthenticationService.AuthenticateAsync(loginModel);
             //var token = _userAuthenticationService.AuthenticateMock(loginModel); //Заглушка
 
             if (token != null)
             {
                 return Ok(token);
             }
-            return NotFound("Error Authentication. Check that the entered data is correct.");  
+            return NotFound("Error Authentication. Check that the entered data is correct.");
         }
     }
 }

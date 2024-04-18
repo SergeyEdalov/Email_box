@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using CheckUnputDataLibrary;
+using Microsoft.EntityFrameworkCore;
 using System.Data;
 using System.IdentityModel.Tokens.Jwt;
+using System.Reflection.Metadata;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using User.Abstractions;
@@ -24,7 +26,7 @@ namespace User.Services
             _mapper = mapper;
             _userContext = userContext;
         }
-        public Guid AddAdmin(UserModel userModel)
+        public async Task AddAdminAsync(UserModel userModel)
         {
             var count = _userContext.Users.Count();
 
@@ -32,29 +34,41 @@ namespace User.Services
 
             userModel.Role = UserRole.Admin;
 
-            var userDb = _mapper.Map<UserEntity>(CreateUser(userModel));
+            var userDb = await Task.Run(() =>_mapper.Map<UserEntity>(CreateUser(userModel)));
 
-            _userContext.Add(userDb);
-            _userContext.SaveChanges();
-            return userDb.Id;
+            await _userContext.AddAsync(userDb);
+            await _userContext.SaveChangesAsync();
         }
 
-        public Guid AddUser(UserModel userModel)
+        public async Task AddUser(UserModel userModel)
         {
             if (userModel.Role == 0)
             {
                 var count = _userContext.Users.Count(x => x.RoleId == 0);
                 if (count > 0) { throw new Exception("Second Admin!"); }
             }
-            if (_userContext.Users.Select(x => x.Email.Contains(userModel.UserName)).FirstOrDefault())
+
+            //var d = _userContext.Users.Select(x => x.Email.Equals("bob@mail.ru")).FirstOrDefault();
+            //var s = _userContext.Users.Select(x => x.Email.Equals(userModel.UserName)).FirstOrDefault();
+
+            if (_userContext.Users.Select(x => x.Email.Equals(userModel.UserName)).FirstOrDefault()) // не может найти по имени
             {
                 throw new Exception("Email is already exsits");
             }
-            var userDb = _mapper.Map<UserEntity>(CreateUser(userModel));
+            var userDb = await Task.Run(() => _mapper.Map<UserEntity>(CreateUser(userModel)));
 
-            _userContext.Add(userDb);
-            _userContext.SaveChanges();
-            return userDb.Id;
+            await _userContext.AddAsync(userDb);
+            await _userContext.SaveChangesAsync(); //что то непонятное с сейвом
+        }
+
+        public async Task<IEnumerable<UserDto>> GetListUsers()
+        {
+            try
+            {
+                var listUsers = await _userContext.Users.Select(x => _mapper.Map<UserDto>(x)).ToListAsync();
+                return listUsers;
+            }
+            catch (Exception ex) { throw new Exception("Server error"); }
         }
 
         public void DeleteUser(string userName)
@@ -72,18 +86,13 @@ namespace User.Services
             }
             else { throw new Exception("User not found"); }
         }
-        public IEnumerable<UserDto> GetListUsers()
+        public async Task<Guid> GetIdIserFromToken(string token)
         {
-            var listUsers = _userContext.Users.Select(x => _mapper.Map<UserDto>(x)).ToList();
-            return listUsers;
-        }
-        public Guid GetIdIserFromToken(string token)
-        {
-            var handler = new JwtSecurityTokenHandler();
-            var tokenJWt = handler.ReadJwtToken(token);
+            var tokenJWt = await Task.Run(() => new JwtSecurityTokenHandler().ReadJwtToken(token));
+
             var claim = tokenJWt.Claims.FirstOrDefault(x => x.Type.Equals(ClaimTypes.NameIdentifier));
 
-            Guid userId = Guid.Parse(claim.Value);
+            var userId = Guid.Parse(claim.Value);
             return userId;
         }
 

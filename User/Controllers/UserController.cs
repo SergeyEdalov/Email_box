@@ -18,11 +18,11 @@ namespace User.Controllers
 
         [HttpPost]
         [Route("AddAdmin")]
-        public IActionResult AddAdmin([FromBody] UserModel user)
+        public async Task<IActionResult> AddAdmin([FromBody] UserModel user)
         {
             try
             {
-                var userId = _userService.AddAdmin(user);
+                await _userService.AddAdminAsync(user);
                 return Ok();
             }
             catch (Exception ex) { return StatusCode(500, ex.Message); }
@@ -30,12 +30,12 @@ namespace User.Controllers
 
         [HttpPost]
         [Route("AddUser")]
-        [Authorize(Roles = "Admin")]
-        public IActionResult AddUser([FromBody] UserModel user)
+        //[Authorize(Roles = "Admin")]
+        public async Task<IActionResult> AddUser([FromBody] UserModel user)
         {
             try
             {
-                var userId = _userService.AddUser(user);
+                await _userService.AddUser(user);
                 return Ok();
             }
             catch (Exception ex) { return StatusCode(500, ex.Message); }
@@ -44,20 +44,27 @@ namespace User.Controllers
         [HttpGet]
         [Route("GetListUsers")]
         [Authorize(Roles = "Admin, User")]
-        public IActionResult GetListUsers()
+        public async Task<IActionResult> GetListUsers()
         {
-            var users = _userService.GetListUsers();
-            return Ok(users);
+            try
+            {
+                var users = await _userService.GetListUsers();
+                return Ok(users);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
         }
 
         [HttpDelete]
         [Route("DeleteUser")]
-        [Authorize(Roles = "Admin")]
-        public IActionResult DeleteUser([FromQuery] UserModel user)
+        //[Authorize(Roles = "Admin")]
+        public async Task<IActionResult> DeleteUser([FromQuery] UserModel user)
         {
-            try 
-            { 
-                _userService.DeleteUser(user.UserName);
+            try
+            {
+                await Task.Run(() => _userService.DeleteUser(user.UserName));
                 return Ok("User deleted");
             }
             catch (Exception ex) { return StatusCode(500, ex.Message); }
@@ -65,12 +72,12 @@ namespace User.Controllers
 
         [HttpGet]
         [Route("GetIdUser")]
-        [Authorize(Roles = "Admin")]
-        public IActionResult GetIdUser(string token)
+        //[Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetIdUser(string token)
         {
             try
             {
-                Guid userID = _userService.GetIdIserFromToken(token);
+                Guid userID = await _userService.GetIdIserFromToken(token);
                 return Ok(userID);
             }
             catch (Exception ex) { return StatusCode(500, ex.Message); }

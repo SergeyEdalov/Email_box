@@ -27,7 +27,7 @@ namespace User.Services
             _mapper = mapper;
             _configuration = configuration;
         }
-        public string Authenticate(LoginModel loginModel)
+        public async Task<string> AuthenticateAsync(LoginModel loginModel)
         {
             var entity = _userContext.Users
                 .FirstOrDefault(x => x.Email.Equals(loginModel.Email));
@@ -48,7 +48,7 @@ namespace User.Services
                 if (entity.Password.SequenceEqual(bpassword))
                 {
                     var user = _mapper.Map<UserDto>(entity);
-                    return GeneratreToken(user);
+                    return await Task.Run(() => GeneratreToken(user));
                 }
                 else return "Wrong password";
             }

@@ -3,17 +3,18 @@
   "password": "Qwerty1)",
   "role": 0
 }
+0402fc1b-255d-4fe5-93e5-b0df68f017ff
 
 {
   "userName": "bob@mail.ru",
   "password": "Hh45!4",
   "role": 1
 }
-e3715904-b3fb-4b59-8df3-b7e0d7703553
+29d9b532-b70b-4ca7-bf90-b3ea90855688
 
 {
   "userName": "masha@mail.ru",
   "password": "UIop!23",
   "role": 1
 }
-e3b7f9a9-9cce-40e0-8725-236b17435564
+d041bf02-0b7a-4e71-9917-de979c7c437d
