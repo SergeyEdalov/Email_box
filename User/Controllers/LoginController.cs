@@ -20,7 +20,7 @@ namespace User.Controllers
         [AllowAnonymous]
         [HttpPost]
         [Route("Login")]
-        public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
+        public async Task<IActionResult> LoginAsync([FromBody] LoginModel loginModel)
         {
             var token = await _userAuthenticationService.AuthenticateAsync(loginModel);
             //var token = _userAuthenticationService.AuthenticateMock(loginModel); //Заглушка

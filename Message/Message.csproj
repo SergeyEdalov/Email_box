@@ -33,7 +33,6 @@
     <Folder Include="Database\DTO\" />
     <Folder Include="Database\Entity\" />
     <Folder Include="Services\" />
-    <Folder Include="Tests\" />
   </ItemGroup>
 
 </Project>

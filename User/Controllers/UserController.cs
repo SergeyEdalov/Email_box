@@ -18,7 +18,7 @@ namespace User.Controllers
 
         [HttpPost]
         [Route("AddAdmin")]
-        public async Task<IActionResult> AddAdmin([FromBody] UserModel user)
+        public async Task<IActionResult> AddAdminAsync([FromBody] UserModel user)
         {
             try
             {
@@ -30,12 +30,12 @@ namespace User.Controllers
 
         [HttpPost]
         [Route("AddUser")]
-        //[Authorize(Roles = "Admin")]
-        public async Task<IActionResult> AddUser([FromBody] UserModel user)
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> AddUserAsync([FromBody] UserModel user)
         {
             try
             {
-                await _userService.AddUser(user);
+                await _userService.AddUserAsync(user);
                 return Ok();
             }
             catch (Exception ex) { return StatusCode(500, ex.Message); }
@@ -48,7 +48,7 @@ namespace User.Controllers
         {
             try
             {
-                var users = await _userService.GetListUsers();
+                var users = await _userService.GetListUsersAsync();
                 return Ok(users);
             }
             catch (Exception ex)
@@ -59,12 +59,12 @@ namespace User.Controllers
 
         [HttpDelete]
         [Route("DeleteUser")]
-        //[Authorize(Roles = "Admin")]
-        public async Task<IActionResult> DeleteUser([FromQuery] UserModel user)
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> DeleteUserAsync([FromQuery] UserModel user)
         {
             try
             {
-                await Task.Run(() => _userService.DeleteUser(user.UserName));
+                await _userService.DeleteUserAsync(user.UserName);
                 return Ok("User deleted");
             }
             catch (Exception ex) { return StatusCode(500, ex.Message); }
@@ -72,12 +72,12 @@ namespace User.Controllers
 
         [HttpGet]
         [Route("GetIdUser")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetIdUser(string token)
         {
             try
             {
-                Guid userID = await _userService.GetIdIserFromToken(token);
+                Guid userID = await _userService.GetIdUserFromTokenAsync(token);
                 return Ok(userID);
             }
             catch (Exception ex) { return StatusCode(500, ex.Message); }

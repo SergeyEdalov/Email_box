@@ -6,17 +6,23 @@ namespace Message.Database.Context
     public class MessageContext : DbContext
     {
         private static string? _connectionString;
+        public DbSet<MessageEntity> Messages { get; set; }
+
+        public MessageContext() { }
 
         public MessageContext(string connectionString)
         {
             _connectionString = connectionString;
         }
 
-        public DbSet<MessageEntity> Messages { get; set; }
+        public MessageContext(DbContextOptions<MessageContext> options): base(options) { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(_connectionString).UseLazyLoadingProxies();
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseNpgsql(_connectionString).UseLazyLoadingProxies();
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

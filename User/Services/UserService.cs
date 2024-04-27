@@ -3,7 +3,6 @@ using CheckUnputDataLibrary;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
 using System.IdentityModel.Tokens.Jwt;
-using System.Reflection.Metadata;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using User.Abstractions;
@@ -40,7 +39,7 @@ namespace User.Services
             await _userContext.SaveChangesAsync();
         }
 
-        public async Task AddUser(UserModel userModel)
+        public async Task AddUserAsync(UserModel userModel)
         {
             if (userModel.Role == 0)
             {
@@ -48,20 +47,19 @@ namespace User.Services
                 if (count > 0) { throw new Exception("Second Admin!"); }
             }
 
-            //var d = _userContext.Users.Select(x => x.Email.Equals("bob@mail.ru")).FirstOrDefault();
-            //var s = _userContext.Users.Select(x => x.Email.Equals(userModel.UserName)).FirstOrDefault();
+            var matchEmail = _userContext.Users.Where(x => x.Email.Equals(userModel.UserName)).FirstOrDefault();
 
-            if (_userContext.Users.Select(x => x.Email.Equals(userModel.UserName)).FirstOrDefault()) // не может найти по имени
+            if (matchEmail?.Email != null)
             {
                 throw new Exception("Email is already exsits");
             }
             var userDb = await Task.Run(() => _mapper.Map<UserEntity>(CreateUser(userModel)));
 
             await _userContext.AddAsync(userDb);
-            await _userContext.SaveChangesAsync(); //что то непонятное с сейвом
+            await _userContext.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<UserDto>> GetListUsers()
+        public async Task<IEnumerable<UserDto>> GetListUsersAsync()
         {
             try
             {
@@ -71,7 +69,7 @@ namespace User.Services
             catch (Exception ex) { throw new Exception("Server error"); }
         }
 
-        public void DeleteUser(string userName)
+        public async Task DeleteUserAsync(string userName)
         {
             var deleteUser = _userContext.Users.Where(x => x.Email.Equals(userName)).FirstOrDefault();
 
@@ -82,11 +80,12 @@ namespace User.Services
                     throw new Exception("You can`t delete yourself");
                 }
                 _userContext.Users.Remove(deleteUser);
-                _userContext.SaveChanges();
+                await _userContext.SaveChangesAsync();
             }
             else { throw new Exception("User not found"); }
         }
-        public async Task<Guid> GetIdIserFromToken(string token)
+
+        public async Task<Guid> GetIdUserFromTokenAsync(string token)
         {
             var tokenJWt = await Task.Run(() => new JwtSecurityTokenHandler().ReadJwtToken(token));
 

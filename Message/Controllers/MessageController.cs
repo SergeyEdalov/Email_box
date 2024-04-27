@@ -17,12 +17,12 @@ namespace Message.Controllers
 
         [HttpGet]
         [Route("GetMessage")]
-        [Authorize]
-        public IActionResult GetMessage()
+        //[Authorize]
+        public async Task<IActionResult> GetMessageAsync(Guid targetUserId)
         {
             try
             {
-                var message = _messageService.GetMessage();
+                var message = await _messageService.GetMessageAsync(targetUserId);
                 return Ok(message);
             }
             catch (Exception ex) { return StatusCode(500, ex.Message); }
@@ -30,15 +30,15 @@ namespace Message.Controllers
 
         [HttpPost]
         [Route("SendMessage")]
-        [Authorize]
-        public IActionResult SendMessage([FromQuery] string message, Guid fromUserId, Guid targetUserId)
+        //[Authorize]
+        public async Task<IActionResult> SendMessageAsync([FromQuery] string message, Guid fromUserId, Guid targetUserId)
         {
             try
             {
-                _messageService.SendMessage(message, fromUserId, targetUserId);
+                await _messageService.SendMessageAsync(message, fromUserId, targetUserId);
                 return Ok("Message sent");
             }
-            catch (Exception ex) { return StatusCode(500); }
+            catch (Exception ex) { return StatusCode(500, "Server Error"); }
         }
     }
 }
