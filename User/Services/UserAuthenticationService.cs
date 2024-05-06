@@ -8,6 +8,7 @@ using System.Text;
 using User.Abstractions;
 using User.DataBase.Context;
 using User.DataBase.DTO;
+using User.DataBase.Entity;
 using User.Models;
 using User.RSAKeys;
 
@@ -31,28 +32,21 @@ namespace User.Services
         {
             var entity = _userContext.Users
                 .FirstOrDefault(x => x.Email.Equals(loginModel.Email));
-
             if (entity == null) return "User not found";
 
-            if (Class1.CheckLengthPassword(loginModel.Password)
-                && Class1.CheckDifficultPassword(loginModel.Password)
-                && Class1.CheckEmail(loginModel.Email))
+            var data = Encoding.UTF8.GetBytes(loginModel.Password).Concat(entity.Salt).ToArray();
+
+            SHA512 shaM = new SHA512Managed();
+
+            var bpassword = shaM.ComputeHash(data);
+
+            if (entity.Password.SequenceEqual(bpassword))
             {
-
-                var data = Encoding.UTF8.GetBytes(loginModel.Password).Concat(entity.Salt).ToArray();
-
-                SHA512 shaM = new SHA512Managed();
-
-                var bpassword = shaM.ComputeHash(data);
-
-                if (entity.Password.SequenceEqual(bpassword))
-                {
-                    var user = _mapper.Map<UserDto>(entity);
-                    return await Task.Run(() => GeneratreToken(user));
-                }
-                else return "Wrong password";
+                var user = _mapper.Map<UserDto>(entity);
+                return await Task.Run(() => GeneratreToken(user));
             }
-            else return "Wrong input data";
+            else return "Wrong password";
+
         }
 
         private string GeneratreToken(UserDto user)

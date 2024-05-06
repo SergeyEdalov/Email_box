@@ -1,7 +1,10 @@
 ﻿using Message.Database.Context;
 using Message.Database.Entity;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography;
+using System.Text;
 using User.DataBase.Context;
+using User.DataBase.Entity;
 
 namespace SolutionTests.TestDbContext
 {
@@ -59,37 +62,6 @@ namespace SolutionTests.TestDbContext
 
             context.Database.EnsureCreated();
 
-            //var salt = new byte[16];
-            //new Random().NextBytes(salt);
-
-            //context.Users.AddRange
-            //    (
-            //        new UserEntity
-            //        {
-            //            Id = new Guid("24cc81fb-5303-4e81-8da7-eeccc63d2531"),
-            //            Email = "admin@mail.ru",
-            //            Password = Encoding.UTF8.GetBytes("Qwerty1)"),
-            //            Salt = salt,
-            //            RoleId = (Role)1
-            //        },
-            //        new UserEntity
-            //        {
-            //            Id = new Guid("c5d627e4-e124-4811-a3ee-730a940b074f"),
-            //            Email = "bob@mail.ru",
-            //            Password = Encoding.UTF8.GetBytes("Hh45!4"),
-            //            Salt = salt,
-            //            RoleId = (Role)1
-            //        },
-            //        new UserEntity
-            //        {
-            //            Id = new Guid("c2cd92fb-5b4c-42d1-9cc2-8d12be77aa88"),
-            //            Email = "masha@mail.ru",
-            //            Password = Encoding.UTF8.GetBytes("UIop!23"),
-            //            Salt = salt,
-            //            RoleId = (Role)1
-            //        }
-            //    );
-            //context.SaveChanges();
             return context;
         }
     }

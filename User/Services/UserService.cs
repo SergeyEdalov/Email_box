@@ -33,7 +33,7 @@ namespace User.Services
 
             userModel.Role = UserRole.Admin;
 
-            var userDb = await Task.Run(() =>_mapper.Map<UserEntity>(CreateUser(userModel)));
+            var userDb = await Task.Run(() => _mapper.Map<UserEntity>(CreateUser(userModel)));
 
             await _userContext.AddAsync(userDb);
             await _userContext.SaveChangesAsync();
@@ -87,19 +87,40 @@ namespace User.Services
 
         public async Task<Guid> GetIdUserFromTokenAsync(string token)
         {
-            var tokenJWt = await Task.Run(() => new JwtSecurityTokenHandler().ReadJwtToken(token));
+            try
+            {
+                var tokenJWt = await Task.Run(() => new JwtSecurityTokenHandler().ReadJwtToken(token));
 
-            var claim = tokenJWt.Claims.FirstOrDefault(x => x.Type.Equals(ClaimTypes.NameIdentifier));
+                var claim = tokenJWt.Claims.FirstOrDefault(x => x.Type.Equals(ClaimTypes.NameIdentifier));
 
-            var userId = Guid.Parse(claim.Value);
-            return userId;
+                if (claim != null)
+                {
+                    if (Guid.TryParse(claim.Value, out Guid userId))
+                    {
+                        return userId;
+                    }
+                }
+                else throw new ArgumentNullException("Token is not contain user id");
+                return Guid.Empty;
+            }
+            catch (Exception ex) { throw new Exception(); }
         }
 
         private UserDto CreateUser(UserModel userModel)
         {
-            if (Class1.CheckLengthPassword(userModel.Password)
-                    && Class1.CheckDifficultPassword(userModel.Password)
-                    && Class1.CheckEmail(userModel.UserName))
+            if (!Class1.CheckEmail(userModel.UserName))
+            {
+                throw new IOException("Wrong format email");
+            }
+            else if (!Class1.CheckLengthPassword(userModel.Password))
+            {
+                throw new IOException("Length password must be more than six characters");
+            }
+            else if (!Class1.CheckDifficultPassword(userModel.Password))
+            {
+                throw new IOException("The password must contain upper and lower case letters, numbers and special characters");
+            }
+            else
             {
                 var userDto = _mapper.Map<UserDto>(userModel);
                 userDto.Id = new Guid();
@@ -114,7 +135,6 @@ namespace User.Services
                 userDto.Password = shaM.ComputeHash(data);
                 return userDto;
             }
-            else throw new Exception("Wrong input data");
         }
     }
 }

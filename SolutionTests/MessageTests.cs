@@ -17,15 +17,12 @@ namespace SolutionTests
         Guid _targetUserId;
         Mock<IMapper> _messageMockMapper;
 
-        [SetUp]
-        public void SetUp()
+        [OneTimeSetUp]
+        public void Init()
         {
             _message = "AAAAAAA";
             _fromUserId = new Guid("e6ad89aa-8885-4a7b-acf5-c3356ab09ea5");
             _targetUserId = new Guid("4530fc35-b32f-4da0-84a5-1baaf8f7fb38");
-
-            _messageContext = getMContext();
-
             _messageMockMapper = new Mock<IMapper>();
 
             _messageMockMapper.Setup(x => x.Map<MessageEntity>(It.IsAny<MessageDto>()))
@@ -49,6 +46,17 @@ namespace SolutionTests
                     IsDelivery = src.IsDelivery
                 });
         }
+        [SetUp]
+        public void SetUp()
+        {
+            _messageContext = getMContext();
+        }
+
+        [TearDown]
+        public void CleanUp()
+        {
+            Destroy(_messageContext);
+        }
 
         [Test]
         public async Task TestSendMessage()
@@ -57,13 +65,11 @@ namespace SolutionTests
             var messageService = new MessageService(_messageMockMapper.Object, _messageContext);
 
             //act
-            
+
             await messageService.SendMessageAsync(_message, _fromUserId, _targetUserId);
 
             //assert
             Assert.IsTrue(_messageContext.SaveChangesAsync().Result == 0);
-
-            Destroy(_messageContext);
 
             //messageMock.Setup((x) => x.SendMessageAsync(It.IsAny<string>(), fromUserId, targetUserId))
             //    .Callback<string>(mess => captureMessage = mess);
@@ -83,8 +89,6 @@ namespace SolutionTests
             //assert
             Assert.IsNotNull(actual);
             Assert.That(actual, Is.EqualTo(expected));
-
-            Destroy(_messageContext);
         }
     }
 }
