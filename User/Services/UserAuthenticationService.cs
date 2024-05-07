@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using CheckUnputDataLibrary;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -8,7 +7,6 @@ using System.Text;
 using User.Abstractions;
 using User.DataBase.Context;
 using User.DataBase.DTO;
-using User.DataBase.Entity;
 using User.Models;
 using User.RSAKeys;
 
@@ -46,7 +44,6 @@ namespace User.Services
                 return await Task.Run(() => GeneratreToken(user));
             }
             else return "Wrong password";
-
         }
 
         private string GeneratreToken(UserDto user)

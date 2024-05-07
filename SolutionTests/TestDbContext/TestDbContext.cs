@@ -1,10 +1,7 @@
 ﻿using Message.Database.Context;
 using Message.Database.Entity;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Cryptography;
-using System.Text;
 using User.DataBase.Context;
-using User.DataBase.Entity;
 
 namespace SolutionTests.TestDbContext
 {

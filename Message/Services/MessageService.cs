@@ -44,6 +44,8 @@ namespace Message.Services
 
         public async Task SendMessageAsync(string message, Guid fromUserId, Guid targetUserId)
         {
+            if (message is null) throw new ArgumentNullException("Message is empty");
+
             var messageDto = new MessageDto()
             {
                 Id = new Guid(),

@@ -1,6 +1,4 @@
 using AutoMapper;
-using Azure.Messaging;
-using Message.Database.Context;
 using Message.Database.DTO;
 using Message.Database.Entity;
 using Message.Services;
@@ -12,18 +10,19 @@ namespace SolutionTests
     [TestFixture]
     class MessageTests : TestCommandBase
     {
-        string _message;
+        string? _message;
         Guid _fromUserId;
         Guid _targetUserId;
         Mock<IMapper> _messageMockMapper;
+        MessageService _messageService;
 
         [OneTimeSetUp]
         public void Init()
         {
-            _message = "AAAAAAA";
             _fromUserId = new Guid("e6ad89aa-8885-4a7b-acf5-c3356ab09ea5");
             _targetUserId = new Guid("4530fc35-b32f-4da0-84a5-1baaf8f7fb38");
             _messageMockMapper = new Mock<IMapper>();
+            _messageContext = getMContext();
 
             _messageMockMapper.Setup(x => x.Map<MessageEntity>(It.IsAny<MessageDto>()))
                 .Returns((MessageDto src) =>
@@ -45,50 +44,87 @@ namespace SolutionTests
                     TargetUserId = src.TargetUserId,
                     IsDelivery = src.IsDelivery
                 });
-        }
-        [SetUp]
-        public void SetUp()
-        {
-            _messageContext = getMContext();
+
+            _messageService = new MessageService(_messageMockMapper.Object, _messageContext);
         }
 
-        [TearDown]
+        [OneTimeTearDown]
         public void CleanUp()
         {
             Destroy(_messageContext);
         }
 
         [Test]
-        public async Task TestSendMessage()
+        public async Task SendMessage_DefaultSuccsess()
         {
             // arrage
-            var messageService = new MessageService(_messageMockMapper.Object, _messageContext);
-
+            _message = "Very well. Test is completed";
             //act
 
-            await messageService.SendMessageAsync(_message, _fromUserId, _targetUserId);
+            await _messageService.SendMessageAsync(_message, _fromUserId, _targetUserId);
+            var actual = _messageContext.Messages.Select(x => x.Body).LastOrDefault();
 
             //assert
-            Assert.IsTrue(_messageContext.SaveChangesAsync().Result == 0);
-
-            //messageMock.Setup((x) => x.SendMessageAsync(It.IsAny<string>(), fromUserId, targetUserId))
-            //    .Callback<string>(mess => captureMessage = mess);
-            //Assert.That(captureMessage, Is.EqualTo("Hello"));    
-            //s = messageMock.Setup((x) => x.SendMessageAsync(message, fromUserId, targetUserId));
-            //Assert.IsNull(s);
+            Assert.That(_message, Is.EqualTo(actual));
         }
 
         [Test]
-        public async Task TestGetMessage()
+        public void SendMessage_AwaitException_MessageIsNull()
         {
             // arrage
-            var messageService = new MessageService(_messageMockMapper.Object, _messageContext);
-            var expected = new List<string> { "I`m fine" };
+            _message = null;
+
             //act
-            var actual = await messageService.GetMessageAsync(_targetUserId);
+            var ex = Assert.ThrowsAsync<ArgumentNullException>(async () => 
+                await _messageService.SendMessageAsync(_message, _fromUserId, _targetUserId));
+
             //assert
-            Assert.IsNotNull(actual);
+            Assert.That(ex.ParamName, Is.EqualTo("Message is empty"));
+        }
+
+        [Test]
+        public async Task GetMessage_DefaultSuccsess()
+        {
+            // arrage
+            var listMessage = _messageContext.Messages
+                .Where(x => x.TargetUserId == _fromUserId && x.IsDelivery == true)
+                .ToList();
+            foreach (var item in listMessage)
+            {
+                item.IsDelivery = false;
+                _messageContext.Update(item);
+            }
+            _messageContext.SaveChanges();
+
+            var expected = new List<string> { "Hello", "How are you?" };
+
+            //act
+            var actual = await _messageService.GetMessageAsync(_fromUserId);
+
+            //assert
             Assert.That(actual, Is.EqualTo(expected));
+        }
+
+        [Test]
+        public void GetMessage_AwaitException_ListMessageIsNull()
+        {
+            // arrage
+            var listMessage = _messageContext.Messages
+                .Where(x => x.TargetUserId == _fromUserId && x.IsDelivery == false)
+                .ToList();
+            foreach (var item in listMessage)
+            {
+                item.IsDelivery = true;
+                _messageContext.Update(item);
+            }
+            _messageContext.SaveChanges();
+
+            //act
+            var ex = Assert.ThrowsAsync<Exception>(async () =>
+                await _messageService.GetMessageAsync(_fromUserId));
+
+            //assert
+            Assert.That(ex.Message, Is.EqualTo("There is no new message"));
         }
     }
 }

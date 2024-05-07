@@ -2,8 +2,6 @@
 using Microsoft.Extensions.Configuration;
 using Moq;
 using SolutionTests.TestDbContext;
-using System.Security.Cryptography;
-using System.Text;
 using User.DataBase.DTO;
 using User.DataBase.Entity;
 using User.Models;
@@ -84,7 +82,6 @@ namespace SolutionTests
         {
             // arrage
             _loginModel.Email = "Oleg@mail.ru";
-
             var expected = "User not found";
 
             //act
@@ -100,7 +97,6 @@ namespace SolutionTests
             // arrage
             _loginModel.Email = "masha@mail.ru";
             _loginModel.Password = "UIop!2386";
-
             var expected = "Wrong password";
 
             //act

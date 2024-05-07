@@ -66,7 +66,7 @@ namespace User.Services
                 var listUsers = await _userContext.Users.Select(x => _mapper.Map<UserDto>(x)).ToListAsync();
                 return listUsers;
             }
-            catch (Exception ex) { throw new Exception("Server error"); }
+            catch (Exception) { throw new Exception("Server error"); }
         }
 
         public async Task DeleteUserAsync(string userName)
@@ -87,23 +87,24 @@ namespace User.Services
 
         public async Task<Guid> GetIdUserFromTokenAsync(string token)
         {
-            try
+            var tokenJwt = new JwtSecurityToken();
+            await Task.Run(() =>
             {
-                var tokenJWt = await Task.Run(() => new JwtSecurityTokenHandler().ReadJwtToken(token));
+                try { tokenJwt = new JwtSecurityTokenHandler().ReadJwtToken(token); }
+                catch (Exception) { throw new Exception("Token is not valid"); }
+            });
 
-                var claim = tokenJWt.Claims.FirstOrDefault(x => x.Type.Equals(ClaimTypes.NameIdentifier));
+            var claim = tokenJwt.Claims.First(x => x.Type.Equals(ClaimTypes.NameIdentifier));
 
-                if (claim != null)
+            if (claim != null)
+            {
+                if (Guid.TryParse(claim.Value, out Guid userId))
                 {
-                    if (Guid.TryParse(claim.Value, out Guid userId))
-                    {
-                        return userId;
-                    }
+                    return userId;
                 }
-                else throw new ArgumentNullException("Token is not contain user id");
-                return Guid.Empty;
             }
-            catch (Exception ex) { throw new Exception(); }
+            else throw new ArgumentNullException("Token is not contain user id");
+            return Guid.Empty;
         }
 
         private UserDto CreateUser(UserModel userModel)
