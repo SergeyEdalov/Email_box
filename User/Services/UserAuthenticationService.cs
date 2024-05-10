@@ -8,6 +8,7 @@ using User.Abstractions;
 using User.DataBase.Context;
 using User.DataBase.DTO;
 using User.Models;
+//using User.RabbitMq;
 using User.RSAKeys;
 
 namespace User.Services
@@ -17,6 +18,7 @@ namespace User.Services
         private readonly UserContext _userContext;
         private readonly IMapper _mapper;
         private readonly IConfiguration? _configuration;
+        //private readonly IRabbitMqService _mqService;
 
         public UserAuthenticationService() { }
 
@@ -41,7 +43,9 @@ namespace User.Services
             if (entity.Password.SequenceEqual(bpassword))
             {
                 var user = _mapper.Map<UserDto>(entity);
-                return await Task.Run(() => GeneratreToken(user));
+                var token = await Task.Run(() => GeneratreToken(user));
+                //_mqService.SendMessage(token);
+                return token;
             }
             else return "Wrong password";
         }

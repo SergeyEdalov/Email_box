@@ -145,3 +145,4 @@ D:\Study_programmist\Курс. Разработка веб-приложения 
 D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\Message\obj\Debug\net8.0\Message.pdb
 D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\Message\obj\Debug\net8.0\Message.genruntimeconfig.cache
 D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\Message\obj\Debug\net8.0\ref\Message.dll
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\Message\bin\Debug\net8.0\RabbitMQ.Client.dll

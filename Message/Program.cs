@@ -5,6 +5,7 @@ using Message.Abstractions;
 using Message.Services;
 using Message.Database.Context;
 using Microsoft.OpenApi.Models;
+//using Message.RabbitMq;
 
 namespace Message
 {
@@ -17,6 +18,7 @@ namespace Message
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddAutoMapper(typeof(MessageMapper));
+            //builder.Services.AddHostedService<RabbitMqListener>();
             builder.Services.AddSwaggerGen(opt =>
             {
                 opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme

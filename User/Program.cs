@@ -7,6 +7,7 @@ using Microsoft.OpenApi.Models;
 using User.Abstractions;
 using User.DataBase.Context;
 using User.Mapper;
+using User.RabbitMq;
 using User.RSAKeys;
 using User.Services;
 
@@ -61,6 +62,7 @@ namespace User
             
             builder.Services.AddSingleton<IUserAuthenticationService, UserAuthenticationService>();
             builder.Services.AddSingleton<IUserService, UserService>();
+            builder.Services.AddScoped<IRabbitMqService, RabbitMqService>(); ;
 
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(o =>
