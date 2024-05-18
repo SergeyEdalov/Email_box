@@ -1,14 +1,12 @@
 ﻿using RabbitMQ.Client.Events;
 using RabbitMQ.Client;
 using System.Text;
-using System.Diagnostics;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-
 using System.Collections.Concurrent;
 using Microsoft.IdentityModel.Tokens;
-using Message.RSAKeys;
 using CheckUnputDataLibrary;
+using RSATools.RSAKeys;
 
 namespace Message.RabbitMq
 {
@@ -31,7 +29,7 @@ namespace Message.RabbitMq
             _connection = _connectionFactory.CreateConnection();
             _channel = _connection.CreateModel();
             _channel.QueueDeclare(
-                               queue: "MyQueue",
+                               queue: "TokenQueue",
                                durable: false,
                                exclusive: false,
                                autoDelete: false,
@@ -44,15 +42,16 @@ namespace Message.RabbitMq
             {
                 var content = Encoding.UTF8.GetString(args.Body.ToArray());
 
-                var token = GetTokenFromContent(content);
-                var userId = GetuserIdFromToken(token);
+                var tokenAndUserId = GetTokenAndUserIdFromContent(content);
 
-                _queue.Enqueue((content, userId));
-
+                if (tokenAndUserId.Item1 != null)
+                {
+                    _queue.Enqueue((tokenAndUserId.Item1, tokenAndUserId.Item2));
+                }
                 _channel.BasicAck(args.DeliveryTag, false);
             };
 
-            _channel.BasicConsume("MyQueue", false, consumer);
+            _channel.BasicConsume("TokenQueue", false, consumer);
 
             return Task.CompletedTask;
         }
@@ -69,24 +68,19 @@ namespace Message.RabbitMq
             return _queue.TryDequeue(out result);
         }
 
-        public JwtSecurityToken GetTokenFromContent (string token)
+        private (string, Guid) GetTokenAndUserIdFromContent (string token)
         {
-            var securityKey = new RsaSecurityKey(RSATools.GetPublicKey());
-            bool s = CheckerLibrary.ValidateToken(token, securityKey);
-            if (s)
+            var securityKey = new RsaSecurityKey(RsaToolsKeys.GetPublicKey());
+
+            if (CheckerLibrary.ValidateToken(token, securityKey))
             {
                 var tokenJwt = new JwtSecurityTokenHandler().ReadJwtToken(token);
-                return tokenJwt;
+                var claim = tokenJwt.Claims.First(x => x.Type.Equals(ClaimTypes.NameIdentifier));
+                Guid.TryParse(claim.Value, out Guid userId);
+
+                return (token, userId);
             }
-            return null;
-        }
-
-        public Guid GetuserIdFromToken(JwtSecurityToken token)
-        {
-            var claim = token.Claims.First(x => x.Type.Equals(ClaimTypes.NameIdentifier));
-
-            Guid.TryParse(claim.Value, out Guid userId);
-            return userId;
+            return (null, new Guid());
         }
     }
 }

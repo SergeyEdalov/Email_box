@@ -18,25 +18,15 @@ namespace Message.Controllers
 
         [HttpGet]
         [Route("GetTokenAndGuidFromRabbit")]
-        public async Task<IActionResult> GetTokenAndGuidFromRabbit()
+        public IActionResult GetTokenAndGuidFromRabbit()
         {
-
-            //var token = _mqListener.Token;
-            //var userId = _mqListener.Id;
-            //var res = new
-            //{
-            //    Token = token,
-            //    UserId = userId,
-            //};
-
-            //return Ok(res);
             if (_mqListener.TryGetLatest(out var result))
             {
                 var res = JsonConvert.SerializeObject(result);
                 return Ok(res);
             }
 
-            return NoContent(); // Или другой подходящий HTTP статус
+            return NoContent();
         }
     }
 }

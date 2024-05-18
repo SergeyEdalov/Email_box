@@ -1,0 +1,15 @@
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\RSATools\bin\Debug\net8.0\RSATools.exe
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\RSATools\bin\Debug\net8.0\RSATools.deps.json
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\RSATools\bin\Debug\net8.0\RSATools.runtimeconfig.json
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\RSATools\bin\Debug\net8.0\RSATools.dll
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\RSATools\bin\Debug\net8.0\RSATools.pdb
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\RSATools\obj\Debug\net8.0\RSATools.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\RSATools\obj\Debug\net8.0\RSATools.AssemblyInfoInputs.cache
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\RSATools\obj\Debug\net8.0\RSATools.AssemblyInfo.cs
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\RSATools\obj\Debug\net8.0\RSATools.csproj.CoreCompileInputs.cache
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\RSATools\obj\Debug\net8.0\RSATools.sourcelink.json
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\RSATools\obj\Debug\net8.0\RSATools.dll
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\RSATools\obj\Debug\net8.0\refint\RSATools.dll
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\RSATools\obj\Debug\net8.0\RSATools.pdb
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\RSATools\obj\Debug\net8.0\RSATools.genruntimeconfig.cache
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\RSATools\obj\Debug\net8.0\ref\RSATools.dll

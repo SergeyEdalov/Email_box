@@ -37,4 +37,8 @@
     <Folder Include="Database\Entity\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RSATools\RSATools.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -148,3 +148,8 @@ D:\Study_programmist\Курс. Разработка веб-приложения 
 D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\Message\bin\Debug\net8.0\RabbitMQ.Client.dll
 D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\Message\bin\Debug\net8.0\CheckUnputDataLibrary.dll
 D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\Message\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\Message\bin\Debug\net8.0\RSATools.deps.json
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\Message\bin\Debug\net8.0\RSATools.runtimeconfig.json
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\Message\bin\Debug\net8.0\RSATools.exe
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\Message\bin\Debug\net8.0\RSATools.dll
+D:\Study_programmist\Курс. Разработка веб-приложения на С#\Total_Attectation\Message\bin\Debug\net8.0\RSATools.pdb

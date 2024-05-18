@@ -18,11 +18,11 @@ namespace Message.Controllers
         [HttpGet]
         [Route("GetMessage")]
         [Authorize]
-        public async Task<IActionResult> GetMessageAsync(Guid targetUserId)
+        public async Task<IActionResult> GetMessageAsync()
         {
             try
             {
-                var message = await _messageService.GetMessageAsync(targetUserId);
+                var message = await _messageService.GetMessageAsync();
                 return Ok(message);
             }
             catch (Exception ex) { return StatusCode(500, ex.Message); }
@@ -31,11 +31,11 @@ namespace Message.Controllers
         [HttpPost]
         [Route("SendMessage")]
         [Authorize]
-        public async Task<IActionResult> SendMessageAsync([FromQuery] string message, Guid fromUserId, Guid targetUserId)
+        public async Task<IActionResult> SendMessageAsync([FromQuery] string message, Guid targetUserId)
         {
             try
             {
-                await _messageService.SendMessageAsync(message, fromUserId, targetUserId);
+                await _messageService.SendMessageAsync(message, targetUserId);
                 return Ok("Message sent");
             }
             catch (ArgumentNullException ex) { return StatusCode(400, ex.Message); }

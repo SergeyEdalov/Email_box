@@ -2,6 +2,7 @@ using AutoMapper;
 using Message.Database.DTO;
 using Message.Database.Entity;
 using Message.Services;
+using Message.RabbitMq;
 using Moq;
 using SolutionTests.TestDbContext;
 
@@ -14,6 +15,7 @@ namespace SolutionTests
         Guid _fromUserId;
         Guid _targetUserId;
         Mock<IMapper> _messageMockMapper;
+        Mock<RabbitMqListener> _rabbitMQListenerMock;
         MessageService _messageService;
 
         [OneTimeSetUp]
@@ -45,7 +47,7 @@ namespace SolutionTests
                     IsDelivery = src.IsDelivery
                 });
 
-            _messageService = new MessageService(_messageMockMapper.Object, _messageContext);
+            _messageService = new MessageService(_messageMockMapper.Object, _messageContext, _rabbitMQListenerMock.Object);
         }
 
         [OneTimeTearDown]
@@ -61,7 +63,7 @@ namespace SolutionTests
             _message = "Very well. Test is completed";
             //act
 
-            await _messageService.SendMessageAsync(_message, _fromUserId, _targetUserId);
+            await _messageService.SendMessageAsync(_message, _targetUserId);
             var actual = _messageContext.Messages.Select(x => x.Body).LastOrDefault();
 
             //assert
@@ -76,7 +78,7 @@ namespace SolutionTests
 
             //act
             var ex = Assert.ThrowsAsync<ArgumentNullException>(async () => 
-                await _messageService.SendMessageAsync(_message, _fromUserId, _targetUserId));
+                await _messageService.SendMessageAsync(_message, _targetUserId));
 
             //assert
             Assert.That(ex.ParamName, Is.EqualTo("Message is empty"));
@@ -99,7 +101,7 @@ namespace SolutionTests
             var expected = new List<string> { "Hello", "How are you?" };
 
             //act
-            var actual = await _messageService.GetMessageAsync(_fromUserId);
+            var actual = await _messageService.GetMessageAsync();
 
             //assert
             Assert.That(actual, Is.EqualTo(expected));
@@ -121,7 +123,7 @@ namespace SolutionTests
 
             //act
             var ex = Assert.ThrowsAsync<Exception>(async () =>
-                await _messageService.GetMessageAsync(_fromUserId));
+                await _messageService.GetMessageAsync());
 
             //assert
             Assert.That(ex.Message, Is.EqualTo("There is no new message"));

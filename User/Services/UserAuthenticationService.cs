@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.IdentityModel.Tokens;
+using RSATools.RSAKeys;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -8,12 +9,10 @@ using User.Abstractions;
 using User.DataBase.Context;
 using User.DataBase.DTO;
 using User.Models;
-using User.RabbitMq;
-using User.RSAKeys;
 
 namespace User.Services
 {
-    public class UserAuthenticationService : IUserAuthenticationService
+    public class UserAuthenticationService : IUserAuthenticationService <LoginModel>
     {
         private readonly UserContext _userContext;
         private readonly IMapper _mapper;
@@ -53,7 +52,7 @@ namespace User.Services
 
         private string GeneratreToken(UserDto user)
         {
-            var securityKey = new RsaSecurityKey(RSATools.GetPrivateKey());
+            var securityKey = new RsaSecurityKey(RsaToolsKeys.GetPrivateKey());
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.RsaSha256Signature);
             var claims = new[]
                 {
@@ -67,20 +66,5 @@ namespace User.Services
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
-        /** Заглушка
-                public string AuthenticateMock(LoginModel loginModel)
-                {
-                    var user = new UserDto();
-                    if (loginModel.Email == "admin" && loginModel.Password == "password")
-                    {
-                        user = new UserDto { Password = Encoding.UTF8.GetBytes(loginModel.Password), Email = loginModel.Email, RoleId = DataBase.Entity.Role.Admin };
-                    }
-                    if (loginModel.Email == "user" && loginModel.Password == "super")
-                    {
-                        user = new UserDto { Password = Encoding.UTF8.GetBytes(loginModel.Password), Email = loginModel.Email, RoleId = DataBase.Entity.Role.User };
-                    }
-                    return GeneratreToken(user);
-                }
-        */
     }
 }

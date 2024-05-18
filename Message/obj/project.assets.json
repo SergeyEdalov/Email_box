@@ -1774,6 +1774,16 @@
         "runtime": {
           "lib/net8.0/CheckUnputDataLibrary.dll": {}
         }
+      },
+      "RSATools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/RSATools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RSATools.dll": {}
+        }
       }
     }
   },
@@ -4780,6 +4790,11 @@
         "totalattectation_1.1.0.3.nupkg.sha512",
         "totalattectation_1.nuspec"
       ]
+    },
+    "RSATools/1.0.0": {
+      "type": "project",
+      "path": "../RSATools/RSATools.csproj",
+      "msbuildProject": "../RSATools/RSATools.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4797,6 +4812,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.3",
       "Newtonsoft.Json >= 13.0.3",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.2",
+      "RSATools >= 1.0.0",
       "RabbitMQ.Client >= 6.8.1",
       "Swashbuckle.AspNetCore >= 6.4.0",
       "TotalAttectation_1 >= 1.0.3"
@@ -4829,7 +4845,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\RSATools\\RSATools.csproj": {
+              "projectPath": "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\RSATools\\RSATools.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

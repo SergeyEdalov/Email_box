@@ -7,9 +7,8 @@ using Message.Database.Context;
 using Microsoft.OpenApi.Models;
 using Message.RabbitMq;
 using RabbitMQ.Client;
-using System.Text;
 using Microsoft.IdentityModel.Tokens;
-using Message.RSAKeys;
+using RSATools.RSAKeys;
 
 namespace Message
 {
@@ -22,36 +21,6 @@ namespace Message
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddAutoMapper(typeof(MessageMapper));
-
-            var securityKey = new RsaSecurityKey(RSATools.GetPrivateKey());
-
-            builder.Services.AddAuthentication("Bearer")
-                .AddJwtBearer("Bearer", options =>
-                {
-                    options.Events = new Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents
-                    {
-                        OnMessageReceived = context =>
-                        {
-                            var authorizationHeader = context.Request.Headers["Authorization"].ToString();
-                            if (!string.IsNullOrEmpty(authorizationHeader) && authorizationHeader.StartsWith("Bearer "))
-                            {
-                                context.Token = authorizationHeader.Substring("Bearer ".Length).Trim();
-                            }
-                            return Task.CompletedTask;
-                        }
-                    };
-                    options.RequireHttpsMetadata = false;
-                    options.SaveToken = true;
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuer = false,
-                        ValidateAudience = false,
-                        ValidateLifetime = true,
-                        ValidateIssuerSigningKey = false,
-                        IssuerSigningKey = securityKey
-                    };
-                });
-            builder.Services.AddAuthorization();
 
             builder.Services.AddSwaggerGen(opt =>
             {
@@ -81,25 +50,51 @@ namespace Message
                 });
             });
 
-            var config = new ConfigurationBuilder();
-            config.AddJsonFile("appsettings.json");
-            var cfg = config.Build();
+            var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
 
             builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
             builder.Host.ConfigureContainer<ContainerBuilder>(cb =>
             {
-                cb.Register(c => new MessageContext(cfg.GetConnectionString("db"))).InstancePerDependency();
+                cb.Register(c => new MessageContext(config.GetConnectionString("db"))).InstancePerDependency();
             });
 
             builder.Services.AddSingleton<IMessageService, MessageService>();
+            builder.Services.AddSingleton<RabbitMqListener>();
 
             builder.Services.AddSingleton<IConnectionFactory>(sp => new ConnectionFactory
             {
                 Endpoint = new AmqpTcpEndpoint(new Uri("amqp://localhost")),
                 DispatchConsumersAsync = true,
             });
-            builder.Services.AddSingleton<RabbitMqListener>();
             builder.Services.AddHostedService(sp => sp.GetRequiredService<RabbitMqListener>());
+
+            builder.Services.AddAuthentication("Bearer")
+                .AddJwtBearer("Bearer", options =>
+                {
+                    options.Events = new Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents
+                    {
+                        OnMessageReceived = context =>
+                        {
+                            var authorizationHeader = context.Request.Headers["Authorization"].ToString();
+                            if (!string.IsNullOrEmpty(authorizationHeader) && authorizationHeader.StartsWith("Bearer "))
+                            {
+                                context.Token = authorizationHeader.Substring("Bearer ".Length).Trim();
+                            }
+                            return Task.CompletedTask;
+                        }
+                    };
+                    options.RequireHttpsMetadata = false;
+                    options.SaveToken = true;
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = false,
+                        ValidateAudience = false,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = false,
+                        IssuerSigningKey = new RsaSecurityKey(RsaToolsKeys.GetPrivateKey())
+                    };
+                });
+            builder.Services.AddAuthorization();
 
             var app = builder.Build();
 
@@ -115,8 +110,6 @@ namespace Message
 
             app.UseHttpsRedirection();
             app.UseRouting();
-
-            //app.UseMiddleware<JwtMiddleware>();
 
             app.UseAuthentication();
             app.UseAuthorization();

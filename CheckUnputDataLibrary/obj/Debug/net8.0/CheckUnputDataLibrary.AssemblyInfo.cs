@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Geekbrains")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.3.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.3+cb7519eb3371b20b8832abe79095e41715a63102")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.3+98b12d15fe358a6ac0d00aae148b96222e40feaa")]
 [assembly: System.Reflection.AssemblyProductAttribute("CheckUnputDataLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CheckUnputDataLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.3.0")]

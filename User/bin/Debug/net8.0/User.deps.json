@@ -20,6 +20,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.3",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.2",
+          "RSATools": "1.0.0",
           "RabbitMQ.Client": "6.8.1",
           "Swashbuckle.AspNetCore": "6.4.0",
           "TotalAttectation_1": "1.0.2"
@@ -1031,6 +1032,11 @@
             "fileVersion": "1.0.2.0"
           }
         }
+      },
+      "RSATools/1.0.0": {
+        "runtime": {
+          "RSATools.dll": {}
+        }
       }
     }
   },
@@ -1676,6 +1682,11 @@
       "sha512": "sha512-eABdSPi9KyhSfCa+bzfRBc7pji2DHomyd2nHrdMw7MmUQMZ1K1AL0Y8Rtf45tOz8eZoIRF6AZ1JHlRYiHcWctA==",
       "path": "totalattectation_1/1.0.2",
       "hashPath": "totalattectation_1.1.0.2.nupkg.sha512"
+    },
+    "RSATools/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

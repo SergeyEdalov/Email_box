@@ -4,6 +4,67 @@
     "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\User\\User.csproj": {}
   },
   "projects": {
+    "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\RSATools\\RSATools.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\RSATools\\RSATools.csproj",
+        "projectName": "RSATools",
+        "projectPath": "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\RSATools\\RSATools.csproj",
+        "packagesPath": "C:\\Users\\Серж\\.nuget\\packages\\",
+        "outputPath": "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\RSATools\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Серж\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\User\\User.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -28,7 +89,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\RSATools\\RSATools.csproj": {
+                "projectPath": "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\RSATools\\RSATools.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

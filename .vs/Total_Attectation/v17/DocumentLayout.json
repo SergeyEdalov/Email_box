@@ -3,56 +3,24 @@
   "WorkspaceRootPath": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\message\\rabbitmq\\rabbitmqlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|solutionrelative:message\\rabbitmq\\rabbitmqlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\message\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|solutionrelative:message\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\user\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\message\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|solutionrelative:message\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\message\\rsakeys\\rsatools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|solutionrelative:message\\rsakeys\\rsatools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\message\\controllers\\rabbitmqcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|solutionrelative:message\\controllers\\rabbitmqcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\message\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|solutionrelative:message\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\user\\controllers\\rabbitmqcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\controllers\\rabbitmqcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\user\\rabbitmq\\rabbitmqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\rabbitmq\\rabbitmqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{494CE8FA-DAAE-4451-8DD2-76916F4CC649}|SolutionTests\\SolutionTests.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\solutiontests\\messagetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494CE8FA-DAAE-4451-8DD2-76916F4CC649}|SolutionTests\\SolutionTests.csproj|solutionrelative:solutiontests\\messagetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\services\\userauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\services\\userauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\message\\services\\jwtmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|solutionrelative:message\\services\\jwtmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\message\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|solutionrelative:message\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\user\\rabbitmq\\irabbitmqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\rabbitmq\\irabbitmqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\message\\rabbitmq\\rabbitmqlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|solutionrelative:message\\rabbitmq\\rabbitmqlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 181,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,155 +42,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Program.cs",
-              "RelativeDocumentMoniker": "User\\Program.cs",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Program.cs",
-              "RelativeToolTip": "User\\Program.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAA2wAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "UserAuthenticationService.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Services\\UserAuthenticationService.cs",
+              "RelativeDocumentMoniker": "User\\Services\\UserAuthenticationService.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Services\\UserAuthenticationService.cs",
+              "RelativeToolTip": "User\\Services\\UserAuthenticationService.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAhwC4AAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-18T08:25:48.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "JwtMiddleware.cs",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Services\\JwtMiddleware.cs",
-              "RelativeDocumentMoniker": "Message\\Services\\JwtMiddleware.cs",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Services\\JwtMiddleware.cs",
-              "RelativeToolTip": "Message\\Services\\JwtMiddleware.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T17:03:38.425Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RabbitMqService.cs",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\RabbitMq\\RabbitMqService.cs",
-              "RelativeDocumentMoniker": "User\\RabbitMq\\RabbitMqService.cs",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\RabbitMq\\RabbitMqService.cs",
-              "RelativeToolTip": "User\\RabbitMq\\RabbitMqService.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAuwC8AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T12:35:27.169Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RabbitMqListener.cs",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\RabbitMq\\RabbitMqListener.cs",
-              "RelativeDocumentMoniker": "Message\\RabbitMq\\RabbitMqListener.cs",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\RabbitMq\\RabbitMqListener.cs",
-              "RelativeToolTip": "Message\\RabbitMq\\RabbitMqListener.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAlwEkAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T12:13:47.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RabbitMqController.cs",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Controllers\\RabbitMqController.cs",
-              "RelativeDocumentMoniker": "Message\\Controllers\\RabbitMqController.cs",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Controllers\\RabbitMqController.cs",
-              "RelativeToolTip": "Message\\Controllers\\RabbitMqController.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAEBAwCcAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T07:39:45.632Z",
+              "WhenOpened": "2024-05-18T12:28:23.143Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "User\\Services\\UserService.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Services\\UserService.cs",
+              "RelativeToolTip": "User\\Services\\UserService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T12:28:14.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MessageService.cs",
               "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Services\\MessageService.cs",
               "RelativeDocumentMoniker": "Message\\Services\\MessageService.cs",
               "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Services\\MessageService.cs",
               "RelativeToolTip": "Message\\Services\\MessageService.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAIAzwBwAAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T09:03:48.673Z",
+              "WhenOpened": "2024-05-18T12:27:55.523Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RSATools.cs",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\RSAKeys\\RSATools.cs",
-              "RelativeDocumentMoniker": "Message\\RSAKeys\\RSATools.cs",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\RSAKeys\\RSATools.cs",
-              "RelativeToolTip": "Message\\RSAKeys\\RSATools.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
+              "DocumentIndex": 0,
+              "Title": "MessageTests.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\SolutionTests\\MessageTests.cs",
+              "RelativeDocumentMoniker": "SolutionTests\\MessageTests.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\SolutionTests\\MessageTests.cs",
+              "RelativeToolTip": "SolutionTests\\MessageTests.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAAADEAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T17:19:27.182Z",
+              "WhenOpened": "2024-05-18T12:27:23.042Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MessageController.cs",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Controllers\\MessageController.cs",
-              "RelativeDocumentMoniker": "Message\\Controllers\\MessageController.cs",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Controllers\\MessageController.cs",
-              "RelativeToolTip": "Message\\Controllers\\MessageController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAmwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T12:33:39.433Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Program.cs",
-              "RelativeDocumentMoniker": "Message\\Program.cs",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Program.cs",
-              "RelativeToolTip": "Message\\Program.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAIA1wCEAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T07:54:54.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RabbitMqController.cs",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Controllers\\RabbitMqController.cs",
-              "RelativeDocumentMoniker": "User\\Controllers\\RabbitMqController.cs",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Controllers\\RabbitMqController.cs",
-              "RelativeToolTip": "User\\Controllers\\RabbitMqController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T12:40:53.342Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\appsettings.json",
-              "RelativeDocumentMoniker": "User\\appsettings.json",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\appsettings.json",
-              "RelativeToolTip": "User\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-14T12:59:15.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IRabbitMqService.cs",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\RabbitMq\\IRabbitMqService.cs",
-              "RelativeDocumentMoniker": "User\\RabbitMq\\IRabbitMqService.cs",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\RabbitMq\\IRabbitMqService.cs",
-              "RelativeToolTip": "User\\RabbitMq\\IRabbitMqService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T12:35:54.435Z"
             }
           ]
         },
@@ -246,12 +114,12 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "a3a5e4a4-9e20-48b4-a35f-f2f50d5cd8b3",
-        "Display": 0,
-        "X": -5,
-        "Y": 97,
-        "Width": 1290,
-        "Height": 780,
+        "Id": "665398c1-8885-4a62-ac0c-46ab3f67c6ff",
+        "Display": 1,
+        "X": 64,
+        "Y": 113,
+        "Width": 1617,
+        "Height": 722,
         "WindowState": 0
       },
       "DocumentGroups": [
@@ -261,15 +129,15 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserAuthenticationService.cs",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Services\\UserAuthenticationService.cs",
-              "RelativeDocumentMoniker": "User\\Services\\UserAuthenticationService.cs",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Services\\UserAuthenticationService.cs",
-              "RelativeToolTip": "User\\Services\\UserAuthenticationService.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAA0wDcAAAAMAAAA",
+              "DocumentIndex": 3,
+              "Title": "RabbitMqListener.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\RabbitMq\\RabbitMqListener.cs",
+              "RelativeDocumentMoniker": "Message\\RabbitMq\\RabbitMqListener.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\RabbitMq\\RabbitMqListener.cs",
+              "RelativeToolTip": "Message\\RabbitMq\\RabbitMqListener.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T12:35:32.474Z",
+              "WhenOpened": "2024-05-18T12:32:17.862Z",
               "EditorCaption": ""
             }
           ]
