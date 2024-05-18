@@ -5,7 +5,11 @@ using Message.Abstractions;
 using Message.Services;
 using Message.Database.Context;
 using Microsoft.OpenApi.Models;
-//using Message.RabbitMq;
+using Message.RabbitMq;
+using RabbitMQ.Client;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using Message.RSAKeys;
 
 namespace Message
 {
@@ -18,9 +22,40 @@ namespace Message
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddAutoMapper(typeof(MessageMapper));
-            //builder.Services.AddHostedService<RabbitMqListener>();
+
+            var securityKey = new RsaSecurityKey(RSATools.GetPrivateKey());
+
+            builder.Services.AddAuthentication("Bearer")
+                .AddJwtBearer("Bearer", options =>
+                {
+                    options.Events = new Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents
+                    {
+                        OnMessageReceived = context =>
+                        {
+                            var authorizationHeader = context.Request.Headers["Authorization"].ToString();
+                            if (!string.IsNullOrEmpty(authorizationHeader) && authorizationHeader.StartsWith("Bearer "))
+                            {
+                                context.Token = authorizationHeader.Substring("Bearer ".Length).Trim();
+                            }
+                            return Task.CompletedTask;
+                        }
+                    };
+                    options.RequireHttpsMetadata = false;
+                    options.SaveToken = true;
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = false,
+                        ValidateAudience = false,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = false,
+                        IssuerSigningKey = securityKey
+                    };
+                });
+            builder.Services.AddAuthorization();
+
             builder.Services.AddSwaggerGen(opt =>
             {
+                opt.SwaggerDoc("v1", new OpenApiInfo { Title = "Message API", Version = "v1" });
                 opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     In = ParameterLocation.Header,
@@ -28,7 +63,7 @@ namespace Message
                     Name = "Authorization",
                     Type = SecuritySchemeType.Http,
                     BearerFormat = "Token",
-                    Scheme = "bearer"
+                    Scheme = "bearer",
                 });
                 opt.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
@@ -38,7 +73,7 @@ namespace Message
                             Reference = new OpenApiReference
                             {
                                 Type = ReferenceType.SecurityScheme,
-                                Id = "Bearer"
+                                Id = "Bearer",
                             }
                         },
                         new string[] {}
@@ -56,18 +91,34 @@ namespace Message
                 cb.Register(c => new MessageContext(cfg.GetConnectionString("db"))).InstancePerDependency();
             });
 
-            builder.Services.AddTransient<IMessageService, MessageService>();
+            builder.Services.AddSingleton<IMessageService, MessageService>();
+
+            builder.Services.AddSingleton<IConnectionFactory>(sp => new ConnectionFactory
+            {
+                Endpoint = new AmqpTcpEndpoint(new Uri("amqp://localhost")),
+                DispatchConsumersAsync = true,
+            });
+            builder.Services.AddSingleton<RabbitMqListener>();
+            builder.Services.AddHostedService(sp => sp.GetRequiredService<RabbitMqListener>());
 
             var app = builder.Build();
 
             if (app.Environment.IsDevelopment())
             {
-                app.UseSwagger();
-                app.UseSwaggerUI();
+                app.UseDeveloperExceptionPage();
             }
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Message API V1");
+            });
 
             app.UseHttpsRedirection();
+            app.UseRouting();
 
+            //app.UseMiddleware<JwtMiddleware>();
+
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllers();

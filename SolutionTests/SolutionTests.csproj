@@ -39,8 +39,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ApiGateway\ApiGateway.csproj" />
-    <ProjectReference Include="..\CheckUnputDataLibrary\CheckUnputDataLibrary.csproj" />
     <ProjectReference Include="..\Message\Message.csproj" />
     <ProjectReference Include="..\User\User.csproj" />
   </ItemGroup>

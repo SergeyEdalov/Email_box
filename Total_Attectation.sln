@@ -10,8 +10,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckUnputDataLibrary", "CheckUnputDataLibrary\CheckUnputDataLibrary.csproj", "{5902885D-5CCC-4C5D-BAD1-A00610F892DF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{DE0AE3B6-250D-4A15-97C6-76708131A5B5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{610F65D3-614B-4409-AF76-6DE0EF06C301} = {610F65D3-614B-4409-AF76-6DE0EF06C301}
+		{A10F32BB-7E33-4669-BA08-C61DDE6DD65C} = {A10F32BB-7E33-4669-BA08-C61DDE6DD65C}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionTests", "SolutionTests\SolutionTests.csproj", "{494CE8FA-DAAE-4451-8DD2-76916F4CC649}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolutionTests", "SolutionTests\SolutionTests.csproj", "{494CE8FA-DAAE-4451-8DD2-76916F4CC649}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

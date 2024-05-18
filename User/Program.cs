@@ -6,7 +6,9 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using User.Abstractions;
 using User.DataBase.Context;
+using User.DataBase.DTO;
 using User.Mapper;
+using User.Models;
 using User.RabbitMq;
 using User.RSAKeys;
 using User.Services;
@@ -23,6 +25,7 @@ namespace User
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddAutoMapper(typeof(UserMapper));
+
             builder.Services.AddSwaggerGen(opt =>
             {
                 opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -61,8 +64,8 @@ namespace User
             });
             
             builder.Services.AddSingleton<IUserAuthenticationService, UserAuthenticationService>();
-            builder.Services.AddSingleton<IUserService, UserService>();
-            builder.Services.AddScoped<IRabbitMqService, RabbitMqService>(); ;
+            builder.Services.AddSingleton<IUserService<UserModel, UserDto>, UserService>();
+            builder.Services.AddScoped<IRabbitMqService, RabbitMqService>();
 
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(o =>

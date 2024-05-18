@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\CheckUnputDataLibrary\\CheckUnputDataLibrary.csproj": {
-      "version": "1.0.1",
+      "version": "1.0.3",
       "restore": {
         "projectUniqueName": "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\CheckUnputDataLibrary\\CheckUnputDataLibrary.csproj",
         "projectName": "TotalAttectation_1",
@@ -45,6 +45,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.5.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

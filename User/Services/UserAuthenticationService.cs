@@ -8,7 +8,7 @@ using User.Abstractions;
 using User.DataBase.Context;
 using User.DataBase.DTO;
 using User.Models;
-//using User.RabbitMq;
+using User.RabbitMq;
 using User.RSAKeys;
 
 namespace User.Services
@@ -18,15 +18,16 @@ namespace User.Services
         private readonly UserContext _userContext;
         private readonly IMapper _mapper;
         private readonly IConfiguration? _configuration;
-        //private readonly IRabbitMqService _mqService;
+        private readonly IRabbitMqService _mqService;
 
         public UserAuthenticationService() { }
 
-        public UserAuthenticationService(UserContext userContext, IMapper mapper, IConfiguration? configuration)
+        public UserAuthenticationService(UserContext userContext, IMapper mapper, IConfiguration? configuration, IRabbitMqService mqService)
         {
             _userContext = userContext;
             _mapper = mapper;
             _configuration = configuration;
+            _mqService = mqService;
         }
         public async Task<string> AuthenticateAsync(LoginModel loginModel)
         {
@@ -44,7 +45,7 @@ namespace User.Services
             {
                 var user = _mapper.Map<UserDto>(entity);
                 var token = await Task.Run(() => GeneratreToken(user));
-                //_mqService.SendMessage(token);
+                await Task.Run(() => _mqService.SendMessage(token));
                 return token;
             }
             else return "Wrong password";

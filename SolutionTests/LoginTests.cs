@@ -23,7 +23,7 @@ namespace SolutionTests
             _userMockMapper = new Mock<IMapper>();
             _userContext = getUContext();
             _configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
-            _userAuthenticationService = new UserAuthenticationService(_userContext, _userMockMapper.Object, _configuration);
+            _userAuthenticationService = new UserAuthenticationService(_userContext, _userMockMapper.Object, _configuration, null); ; ;
 
             _userMockMapper.Setup(x => x.Map<UserEntity>(It.IsAny<UserDto>()))
                 .Returns((UserDto src) =>

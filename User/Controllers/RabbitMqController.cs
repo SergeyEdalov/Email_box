@@ -1,27 +1,27 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using User.RabbitMq;
+﻿//using Microsoft.AspNetCore.Http;
+//using Microsoft.AspNetCore.Mvc;
+//using User.RabbitMq;
 
-namespace User.Controllers
-{
-    [Route("api/[controller]")]
-    [ApiController]
-    public class RabbitMqController : ControllerBase
-    {
-        private readonly IRabbitMqService _mqService;
+//namespace User.Controllers
+//{
+//    [Route("api/[controller]")]
+//    [ApiController]
+//    public class RabbitMqController : ControllerBase
+//    {
+//        private readonly IRabbitMqService _mqService;
 
-        public RabbitMqController(IRabbitMqService mqService)
-        {
-            _mqService = mqService;
-        }
+//        public RabbitMqController(IRabbitMqService mqService)
+//        {
+//            _mqService = mqService;
+//        }
 
-        [Route("[action]/{message}")]
-        [HttpGet]
-        public IActionResult SendMessage(string message)
-        {
-            _mqService.SendMessage(message);
+//        [Route("[action]/{message}")]
+//        [HttpGet]
+//        public IActionResult SendMessage(string message)
+//        {
+//            _mqService.SendMessage(message);
 
-            return Ok("Сообщение отправлено");
-        }
-    }
-}
+//            return Ok("Сообщение отправлено");
+//        }
+//    }
+//}

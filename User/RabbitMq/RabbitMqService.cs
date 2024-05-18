@@ -1,6 +1,7 @@
 ﻿using RabbitMQ.Client;
 using System.Text.Json;
 using System.Text;
+using System.ComponentModel;
 
 namespace User.RabbitMq
 {
@@ -16,7 +17,18 @@ namespace User.RabbitMq
         {
             // Не забудьте вынести значения "localhost" и "MyQueue"
             // в файл конфигурации
-            var factory = new ConnectionFactory() { HostName = "localhost" };
+            var factory = new ConnectionFactory()
+            {
+                HostName = "localhost",
+                //Port = 15672,
+                //UserName = "rabbitMqUserName",
+                //Password = "rabbitMqPassword",
+                //VirtualHost = "rabbitMqVirtualHost",
+                //Ssl =
+                //{
+                //    ServerName = "rabbitMqHostName",
+                //}
+            };
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
