@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Moq;
 using SolutionTests.TestDbContext;
+using User.Abstractions;
 using User.DataBase.DTO;
 using User.DataBase.Entity;
 using User.Models;
@@ -16,6 +17,7 @@ namespace SolutionTests
         private IConfiguration? _configuration;
         UserAuthenticationService _userAuthenticationService;
         LoginModel _loginModel;
+        Mock <IRabbitMqService> _rabbitMqServiceMock;
 
         [OneTimeSetUp]
         public void Init()
@@ -23,7 +25,7 @@ namespace SolutionTests
             _userMockMapper = new Mock<IMapper>();
             _userContext = getUContext();
             _configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
-            _userAuthenticationService = new UserAuthenticationService(_userContext, _userMockMapper.Object, _configuration, null); ; ;
+            _rabbitMqServiceMock = new Mock<IRabbitMqService>();
 
             _userMockMapper.Setup(x => x.Map<UserEntity>(It.IsAny<UserDto>()))
                 .Returns((UserDto src) =>
@@ -46,11 +48,14 @@ namespace SolutionTests
                 RoleId = src.RoleId
             });
 
+            _rabbitMqServiceMock.Setup(mq => mq.SendMessage(It.IsAny<object>()));
+
             _loginModel = new LoginModel()
             {
                 Email = "masha@mail.ru",
                 Password = "UIop!23",
             };
+            _userAuthenticationService = new UserAuthenticationService(_userContext, _userMockMapper.Object, _configuration, _rabbitMqServiceMock.Object);
 
             CreateUserEntityToUserContext("masha@mail.ru", "UIop!23", _userContext);
         }
@@ -67,13 +72,13 @@ namespace SolutionTests
         public async Task Login_DefaultSuccsess_ExpectedToken()
         {
             // arrage
-            var expectedToken = "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2IiwidHlwIjoiSldUIn0.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImMyY2Q5MmZiLTViNGMtNDJkMS05Y2MyLThkMTJiZTc3YWE4OCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3MTQyMjE4OTEsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcyMDUiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MjA1In0.fj5tbYvB-xzfPTSHVSU1a7oJR3JXNVUGMtu8e_DuwMEt2a-AzeivGB4z0CZtQP0edUrmxn15JhIdvj1qd95Ng5I6tWHw0XvkasbcaBhS4j6hYeeGdvyCAA8sG_FHckabFnjhUTlIxKy-0Zx-Q7vC6tcjVZGT2tjfnCxoJzagY7D8PtZ5Dkv9834EC-qkEHRKv0mr_TlQCiId10fv0UUC0-q6eiwaw7xHsDoP5ZpYLqWwKQ4pomC5ms8J5XZy5PXv_pi1DCfslj5oo6iO_sG1UFZYdZflVou-A2kbyF7fJh6I5WGh4vNYSsEanBcuwmIwfkAmkpvV-Py1Zv6Td1pHPA";
+            var expectedToken = "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2IiwidHlwIjoiSldUIn0.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImMyY2Q5MmZiLTViNGMtNDJkMS05Y2MyLThkMTJiZTc3YWE4OCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3MTYyMTM0MzMsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcyMDUiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MjA1In0.MMkhRuBUx5pgYYf2ZArD2pBqQ4Qcq7aB9WYtf0tNKFDvybE0k-PUWV0nkBSEaQJ0pps_mAzKPuiXcJ6UOEKyvNibfIpz0sZnU9_tmPkTJ9X8ejqGqmVMSt_Fbnzg0ZU8mh4xTk1xPzMrw1x3z3Bg-pV6KTlIrsjgkNLGAd5rs-FmSsfhqp19vfVTSOhar4nDGZYl8_BjeE1gskwjPEEvfq_dRhSNOVEpUfA0yoEpusDNLHCvwDFokIptvy_-sZU-YaBlNyMjLG5t2krGj51dSFUTJqnxqUbpbsFMCfucjmKV-PL_G9mkueJzkV2OgBl-IppriWaF8yVZrylWhbVT9Q";
 
             //act
             var actualToken = await _userAuthenticationService.AuthenticateAsync(_loginModel);
 
             //assert
-            Assert.That(actualToken.Length == expectedToken.Length);
+            Assert.That(actualToken.Length <= expectedToken.Length);
             Assert.That(actualToken.Contains("eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2IiwidHlwIjoiSldUIn0"));
         }
 

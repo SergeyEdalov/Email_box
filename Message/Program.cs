@@ -57,15 +57,16 @@ namespace Message
             {
                 cb.Register(c => new MessageContext(config.GetConnectionString("db"))).InstancePerDependency();
             });
-
             builder.Services.AddSingleton<IMessageService, MessageService>();
-            builder.Services.AddSingleton<RabbitMqListener>();
 
             builder.Services.AddSingleton<IConnectionFactory>(sp => new ConnectionFactory
             {
                 Endpoint = new AmqpTcpEndpoint(new Uri("amqp://localhost")),
                 DispatchConsumersAsync = true,
             });
+            builder.Services.AddSingleton<IRabbitMqService<string, Guid>, RabbitMqService>();
+
+            builder.Services.AddSingleton<RabbitMqListener>();
             builder.Services.AddHostedService(sp => sp.GetRequiredService<RabbitMqListener>());
 
             builder.Services.AddAuthentication("Bearer")

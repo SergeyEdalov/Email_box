@@ -3,10 +3,10 @@ using RabbitMQ.Client;
 using System.Text;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using System.Collections.Concurrent;
 using Microsoft.IdentityModel.Tokens;
 using CheckUnputDataLibrary;
 using RSATools.RSAKeys;
+using Message.Abstractions;
 
 namespace Message.RabbitMq
 {
@@ -15,13 +15,18 @@ namespace Message.RabbitMq
         private IConnection _connection;
         private IModel _channel;
         private readonly IConnectionFactory _connectionFactory;
-        private readonly ConcurrentQueue<(string token, Guid userId)> _queue = new ConcurrentQueue<(string token, Guid userId)>();
+        private readonly IRabbitMqService<string, Guid> _rabbitMqService;
+        private readonly ILogger<RabbitMqListener> _logger;
 
-        public RabbitMqListener(IConnectionFactory connectionFactory)
+        public RabbitMqListener(
+            IConnectionFactory connectionFactory, 
+            ILogger<RabbitMqListener> logger, 
+            IRabbitMqService<string, Guid> rabbitMqService)
         {
             _connectionFactory = connectionFactory;
-            // Не забудьте вынести значения "localhost" и "MyQueue"
-            // в файл конфигурации
+            _logger = logger;
+            _rabbitMqService = rabbitMqService;
+            // Не забудьте вынести значения "localhost" и "MyQueue" в файл конфигурации
         }
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
@@ -41,12 +46,13 @@ namespace Message.RabbitMq
             consumer.Received += async (ch, args) =>
             {
                 var content = Encoding.UTF8.GetString(args.Body.ToArray());
+                _logger.LogInformation("Received message: {content}", content);
 
                 var tokenAndUserId = GetTokenAndUserIdFromContent(content);
 
                 if (tokenAndUserId.Item1 != null)
                 {
-                    _queue.Enqueue((tokenAndUserId.Item1, tokenAndUserId.Item2));
+                    _rabbitMqService.AddDataToQueue(tokenAndUserId.Item1, tokenAndUserId.Item2);
                 }
                 _channel.BasicAck(args.DeliveryTag, false);
             };
@@ -63,12 +69,7 @@ namespace Message.RabbitMq
             base.Dispose();
         }
 
-        public bool TryGetLatest(out (string token, Guid userId) result)
-        {
-            return _queue.TryDequeue(out result);
-        }
-
-        private (string, Guid) GetTokenAndUserIdFromContent (string token)
+        private (string, Guid) GetTokenAndUserIdFromContent(string token)
         {
             var securityKey = new RsaSecurityKey(RsaToolsKeys.GetPublicKey());
 

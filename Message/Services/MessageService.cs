@@ -3,7 +3,6 @@ using Message.Abstractions;
 using Message.Database.Context;
 using Message.Database.DTO;
 using Message.Database.Entity;
-using Message.RabbitMq;
 using Microsoft.EntityFrameworkCore;
 
 namespace Message.Services
@@ -13,26 +12,26 @@ namespace Message.Services
 
         private readonly IMapper _mapper;
         private readonly MessageContext _messageContext;
-        private readonly RabbitMqListener _mqListener;
+        private readonly IRabbitMqService<string, Guid> _mqService;
 
         public MessageService() { }
 
-        public MessageService(IMapper mapper, MessageContext messageContext, RabbitMqListener mqListener)
+        public MessageService(IMapper mapper, MessageContext messageContext, IRabbitMqService<string, Guid> mqService)
         {
             _mapper = mapper;
             _messageContext = messageContext;
-            _mqListener = mqListener;
+            _mqService = mqService;
         }
         public async Task<IEnumerable<string>> GetMessageAsync()
         {
-            if (!_mqListener.TryGetLatest(out var result)) throw new Exception("No message available.");
-
+            if (!_mqService.TryGetLatest(out var result)) throw new Exception("No message available.");
             var userId = result.userId;
+
             var messageList = await _messageContext.Messages
                 .Where(x => x.TargetUserId == userId && x.IsDelivery == false)
                 .ToListAsync();
 
-            if (messageList.Count == 0) throw new Exception("There is no new message"); 
+            if (messageList.Count == 0) throw new Exception("There is no new message");
 
             var listMessage = new List<string>();
 
@@ -51,7 +50,7 @@ namespace Message.Services
         public async Task SendMessageAsync(string message, Guid targetUserId)
         {
             if (string.IsNullOrWhiteSpace(message)) throw new ArgumentNullException("Message is empty");
-            if (!_mqListener.TryGetLatest(out var result)) throw new Exception("No message available.");
+            if (!_mqService.TryGetLatest(out var result)) throw new Exception("No message available.");
             var userId = result.userId;
 
             var messageDto = new MessageDto()
