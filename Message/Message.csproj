@@ -24,16 +24,21 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.2" />
     <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="TotalAttectation_1" Version="1.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Database\Context\" />
     <Folder Include="Database\DTO\" />
     <Folder Include="Database\Entity\" />
-    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RSATools\RSATools.csproj" />
   </ItemGroup>
 
 </Project>

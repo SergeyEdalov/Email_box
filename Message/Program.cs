@@ -5,7 +5,10 @@ using Message.Abstractions;
 using Message.Services;
 using Message.Database.Context;
 using Microsoft.OpenApi.Models;
-//using Message.RabbitMq;
+using Message.RabbitMq;
+using RabbitMQ.Client;
+using Microsoft.IdentityModel.Tokens;
+using RSATools.RSAKeys;
 
 namespace Message
 {
@@ -18,9 +21,10 @@ namespace Message
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddAutoMapper(typeof(MessageMapper));
-            //builder.Services.AddHostedService<RabbitMqListener>();
+
             builder.Services.AddSwaggerGen(opt =>
             {
+                opt.SwaggerDoc("v1", new OpenApiInfo { Title = "Message API", Version = "v1" });
                 opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     In = ParameterLocation.Header,
@@ -28,7 +32,7 @@ namespace Message
                     Name = "Authorization",
                     Type = SecuritySchemeType.Http,
                     BearerFormat = "Token",
-                    Scheme = "bearer"
+                    Scheme = "bearer",
                 });
                 opt.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
@@ -38,7 +42,7 @@ namespace Message
                             Reference = new OpenApiReference
                             {
                                 Type = ReferenceType.SecurityScheme,
-                                Id = "Bearer"
+                                Id = "Bearer",
                             }
                         },
                         new string[] {}
@@ -46,28 +50,69 @@ namespace Message
                 });
             });
 
-            var config = new ConfigurationBuilder();
-            config.AddJsonFile("appsettings.json");
-            var cfg = config.Build();
+            var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
 
             builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
             builder.Host.ConfigureContainer<ContainerBuilder>(cb =>
             {
-                cb.Register(c => new MessageContext(cfg.GetConnectionString("db"))).InstancePerDependency();
+                cb.Register(c => new MessageContext(config.GetConnectionString("db"))).InstancePerDependency();
             });
+            builder.Services.AddSingleton<IMessageService, MessageService>();
 
-            builder.Services.AddTransient<IMessageService, MessageService>();
+            builder.Services.AddSingleton<IConnectionFactory>(sp => new ConnectionFactory
+            {
+                Endpoint = new AmqpTcpEndpoint(new Uri("amqp://localhost")),
+                DispatchConsumersAsync = true,
+            });
+            builder.Services.AddSingleton<IRabbitMqService<string, Guid>, RabbitMqService>();
+
+            builder.Services.AddSingleton<RabbitMqListener>();
+            builder.Services.AddHostedService(sp => sp.GetRequiredService<RabbitMqListener>());
+
+            builder.Services.AddAuthentication("Bearer")
+                .AddJwtBearer("Bearer", options =>
+                {
+                    options.Events = new Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents
+                    {
+                        OnMessageReceived = context =>
+                        {
+                            var authorizationHeader = context.Request.Headers["Authorization"].ToString();
+                            if (!string.IsNullOrEmpty(authorizationHeader) && authorizationHeader.StartsWith("Bearer "))
+                            {
+                                context.Token = authorizationHeader.Substring("Bearer ".Length).Trim();
+                            }
+                            return Task.CompletedTask;
+                        }
+                    };
+                    options.RequireHttpsMetadata = false;
+                    options.SaveToken = true;
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = false,
+                        ValidateAudience = false,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = false,
+                        IssuerSigningKey = new RsaSecurityKey(RsaToolsKeys.GetPrivateKey())
+                    };
+                });
+            builder.Services.AddAuthorization();
 
             var app = builder.Build();
 
             if (app.Environment.IsDevelopment())
             {
-                app.UseSwagger();
-                app.UseSwaggerUI();
+                app.UseDeveloperExceptionPage();
             }
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Message API V1");
+            });
 
             app.UseHttpsRedirection();
+            app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllers();

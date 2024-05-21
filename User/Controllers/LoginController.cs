@@ -10,9 +10,9 @@ namespace User.Controllers
     [Route("[controller]")]
     public class LoginController : ControllerBase
     {
-        private readonly IUserAuthenticationService _userAuthenticationService; 
+        private readonly IUserAuthenticationService<LoginModel> _userAuthenticationService; 
 
-        public LoginController(IUserAuthenticationService userAuthenticationService)
+        public LoginController(IUserAuthenticationService<LoginModel> userAuthenticationService)
         {
             _userAuthenticationService = userAuthenticationService;
         }
@@ -23,7 +23,6 @@ namespace User.Controllers
         public async Task<IActionResult> LoginAsync([FromBody] LoginModel loginModel)
         {
             var token = await _userAuthenticationService.AuthenticateAsync(loginModel);
-            //var token = _userAuthenticationService.AuthenticateMock(loginModel); //Заглушка
 
             if (token != null)
             {

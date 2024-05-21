@@ -2,10 +2,8 @@
 
 namespace User.Abstractions
 {
-    public interface IUserAuthenticationService
+    public interface IUserAuthenticationService <T>
     {
-        public Task<string> AuthenticateAsync (LoginModel loginModel);
-
-        //public string AuthenticateMock(LoginModel loginModel); //Заглушка
+        public Task<string> AuthenticateAsync (T loginModel);
     }
 }

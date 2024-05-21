@@ -31,12 +31,15 @@ eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2Iiwi
   "password": "O5#5hGb",
   "role": 1
 }
+1d18df20-4baa-47c6-b6f1-8ce9be5addd4
+
+eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2IiwidHlwIjoiSldUIn0.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjFkMThkZjIwLTRiYWEtNDdjNi1iNmYxLThjZTliZTVhZGRkNCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3MTYwMjQwNTMsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcyMDUiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MjA1In0.WyvmBz_QZMkQryLsSjAL6UIQyD33MRNjYsoWuF2dVcFDbTAahizTA5inz2OsZxCLniZLID8AKN1-ESuLHgJDddV6oMW7hI00rWS7enKq1oHN66xPYdE0mo9AF0b-JSR5GNM4lrYCj0V_Q4zELYpzMqu7qvkgwn12QbIdcAzPQiY4nimFhaAFVMS9cukuH8rzWZCwH7GQDb_yFyLE2Bt6PBKTT3AJGbFOK55wmrGJ4YPPAMRT--gJPkm9dDouuQMy-xra0H7v_63z27Ij01oi_7nk7OtTYJ6Y3KOhWzU5IkjbIk-LG0cN-3XUnE1P211SXZe5ghQvTV6YZDp_0iVaKA
 
 {
   "userName": "Irina@gmail.com",
   "password": "&67Jkj1",
   "role": 1
 }
-
+0249b16d-661f-4427-bfb9-6f4ee0a2d2e0
 
 docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management

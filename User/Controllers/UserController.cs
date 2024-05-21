@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using User.Abstractions;
+using User.DataBase.DTO;
 using User.Models;
 
 namespace User.Controllers
@@ -9,9 +10,9 @@ namespace User.Controllers
     [Route("[controller]")]
     public class UserController : ControllerBase
     {
-        private readonly IUserService _userService;
+        private readonly IUserService<UserModel, UserDto> _userService;
 
-        public UserController(IUserService userService)
+        public UserController(IUserService<UserModel, UserDto> userService)
         {
             _userService = userService;
         }

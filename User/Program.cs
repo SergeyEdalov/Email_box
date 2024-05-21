@@ -4,11 +4,12 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using RSATools.RSAKeys;
 using User.Abstractions;
 using User.DataBase.Context;
+using User.DataBase.DTO;
 using User.Mapper;
-using User.RabbitMq;
-using User.RSAKeys;
+using User.Models;
 using User.Services;
 
 namespace User
@@ -23,6 +24,7 @@ namespace User
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddAutoMapper(typeof(UserMapper));
+
             builder.Services.AddSwaggerGen(opt =>
             {
                 opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -50,19 +52,17 @@ namespace User
                 });
             });
 
-            var config = new ConfigurationBuilder();
-            config.AddJsonFile("appsettings.json");
-            var cfg = config.Build();
+            var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
 
             builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
             builder.Host.ConfigureContainer<ContainerBuilder>(cb =>
             {
-                cb.Register(c => new UserContext(cfg.GetConnectionString("db"))).InstancePerDependency();
+                cb.Register(c => new UserContext(config.GetConnectionString("db"))).InstancePerDependency();
             });
             
-            builder.Services.AddSingleton<IUserAuthenticationService, UserAuthenticationService>();
-            builder.Services.AddSingleton<IUserService, UserService>();
-            builder.Services.AddScoped<IRabbitMqService, RabbitMqService>(); ;
+            builder.Services.AddSingleton<IUserAuthenticationService<LoginModel>, UserAuthenticationService>();
+            builder.Services.AddSingleton<IUserService<UserModel, UserDto>, UserService>();
+            builder.Services.AddScoped<IRabbitMqService, RabbitMqService>();
 
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(o =>
@@ -74,7 +74,7 @@ namespace User
                         ValidateLifetime = true,
                         ValidIssuer = builder.Configuration["Jwt:Issuer"],
                         ValidAudience = builder.Configuration["Jwt:Audience"],
-                        IssuerSigningKey = new RsaSecurityKey(RSATools.GetPublicKey())
+                        IssuerSigningKey = new RsaSecurityKey(RsaToolsKeys.GetPublicKey())
                     };
                 });
 

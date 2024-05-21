@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "c3QyKz4Veaw3rX1mEYYO64h21csJ+ZBVwEYmYfGvXazQxaFBR6KIsz8cw3VQVOzbad57t/BYdXoWu6AXXoVEWg==",
+  "dgSpecHash": "YILQhbqrRllLYbaFVarLcbcRXzEF6LjxP8tnmG+jWjVzl/Nr2OQBNjCdN1BPV45wGXOpmX1RzokFG2pKVPHQXA==",
   "success": true,
   "projectFilePath": "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\CheckUnputDataLibrary\\CheckUnputDataLibrary.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Серж\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.5.2\\microsoft.identitymodel.abstractions.7.5.2.nupkg.sha512",
+    "C:\\Users\\Серж\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\7.5.2\\microsoft.identitymodel.jsonwebtokens.7.5.2.nupkg.sha512",
+    "C:\\Users\\Серж\\.nuget\\packages\\microsoft.identitymodel.logging\\7.5.2\\microsoft.identitymodel.logging.7.5.2.nupkg.sha512",
+    "C:\\Users\\Серж\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.5.2\\microsoft.identitymodel.tokens.7.5.2.nupkg.sha512",
+    "C:\\Users\\Серж\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.5.2\\system.identitymodel.tokens.jwt.7.5.2.nupkg.sha512"
+  ],
   "logs": []
 }

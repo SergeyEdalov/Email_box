@@ -4,6 +4,7 @@ using Message.Database.Entity;
 using Message.Services;
 using Moq;
 using SolutionTests.TestDbContext;
+using Message.Abstractions;
 
 namespace SolutionTests
 {
@@ -14,6 +15,7 @@ namespace SolutionTests
         Guid _fromUserId;
         Guid _targetUserId;
         Mock<IMapper> _messageMockMapper;
+        Mock<IRabbitMqService<string, Guid>> _rabbitMqServiceMock;
         MessageService _messageService;
 
         [OneTimeSetUp]
@@ -23,6 +25,8 @@ namespace SolutionTests
             _targetUserId = new Guid("4530fc35-b32f-4da0-84a5-1baaf8f7fb38");
             _messageMockMapper = new Mock<IMapper>();
             _messageContext = getMContext();
+            _rabbitMqServiceMock = new Mock<IRabbitMqService<string, Guid>>();
+            var userId = _fromUserId;
 
             _messageMockMapper.Setup(x => x.Map<MessageEntity>(It.IsAny<MessageDto>()))
                 .Returns((MessageDto src) =>
@@ -44,9 +48,17 @@ namespace SolutionTests
                     TargetUserId = src.TargetUserId,
                     IsDelivery = src.IsDelivery
                 });
+            _rabbitMqServiceMock.Setup(mq => mq.TryGetLatest(out It.Ref<(string token, Guid userId)>.IsAny))
+                .Returns(true)
+                .Callback(new TryGetLatestCallback((out (string token, Guid userId) result) =>
+                {
+                    result = ("valid_token", userId);
+                }));
 
-            _messageService = new MessageService(_messageMockMapper.Object, _messageContext);
+
+            _messageService = new MessageService(_messageMockMapper.Object, _messageContext, _rabbitMqServiceMock.Object);
         }
+        private delegate void TryGetLatestCallback(out (string token, Guid userId) result);
 
         [OneTimeTearDown]
         public void CleanUp()
@@ -61,7 +73,7 @@ namespace SolutionTests
             _message = "Very well. Test is completed";
             //act
 
-            await _messageService.SendMessageAsync(_message, _fromUserId, _targetUserId);
+            await _messageService.SendMessageAsync(_message, _targetUserId);
             var actual = _messageContext.Messages.Select(x => x.Body).LastOrDefault();
 
             //assert
@@ -76,7 +88,7 @@ namespace SolutionTests
 
             //act
             var ex = Assert.ThrowsAsync<ArgumentNullException>(async () => 
-                await _messageService.SendMessageAsync(_message, _fromUserId, _targetUserId));
+                await _messageService.SendMessageAsync(_message, _targetUserId));
 
             //assert
             Assert.That(ex.ParamName, Is.EqualTo("Message is empty"));
@@ -99,7 +111,7 @@ namespace SolutionTests
             var expected = new List<string> { "Hello", "How are you?" };
 
             //act
-            var actual = await _messageService.GetMessageAsync(_fromUserId);
+            var actual = await _messageService.GetMessageAsync();
 
             //assert
             Assert.That(actual, Is.EqualTo(expected));
@@ -121,7 +133,7 @@ namespace SolutionTests
 
             //act
             var ex = Assert.ThrowsAsync<Exception>(async () =>
-                await _messageService.GetMessageAsync(_fromUserId));
+                await _messageService.GetMessageAsync());
 
             //assert
             Assert.That(ex.Message, Is.EqualTo("There is no new message"));

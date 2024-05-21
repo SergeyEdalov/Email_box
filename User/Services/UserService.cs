@@ -13,7 +13,7 @@ using User.Models;
 
 namespace User.Services
 {
-    public class UserService : IUserService
+    public class UserService : IUserService <UserModel, UserDto>
     {
         private readonly IMapper _mapper;
         private readonly UserContext _userContext;
@@ -109,15 +109,15 @@ namespace User.Services
 
         private UserDto CreateUser(UserModel userModel)
         {
-            if (!Class1.CheckEmail(userModel.UserName))
+            if (!CheckerLibrary.CheckEmail(userModel.UserName))
             {
                 throw new IOException("Wrong format email");
             }
-            else if (!Class1.CheckLengthPassword(userModel.Password))
+            else if (!CheckerLibrary.CheckLengthPassword(userModel.Password))
             {
                 throw new IOException("Length password must be more than six characters");
             }
-            else if (!Class1.CheckDifficultPassword(userModel.Password))
+            else if (!CheckerLibrary.CheckDifficultPassword(userModel.Password))
             {
                 throw new IOException("The password must contain upper and lower case letters, numbers and special characters");
             }

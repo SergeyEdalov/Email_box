@@ -5,9 +5,13 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<PackageId>TotalAttectation_1</PackageId>
-		<Version>1.0.1</Version>
+		<Version>1.0.3</Version>
 		<Authors>EdalovSergey</Authors>
 		<Company>Geekbrains</Company>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.5.2" />
+	</ItemGroup>
 
 </Project>

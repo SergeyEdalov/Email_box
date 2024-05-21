@@ -12,21 +12,26 @@ namespace Message.Services
 
         private readonly IMapper _mapper;
         private readonly MessageContext _messageContext;
+        private readonly IRabbitMqService<string, Guid> _mqService;
 
         public MessageService() { }
 
-        public MessageService(IMapper mapper, MessageContext messageContext)
+        public MessageService(IMapper mapper, MessageContext messageContext, IRabbitMqService<string, Guid> mqService)
         {
             _mapper = mapper;
             _messageContext = messageContext;
+            _mqService = mqService;
         }
-        public async Task<IEnumerable<string>> GetMessageAsync(Guid targetUserId)
+        public async Task<IEnumerable<string>> GetMessageAsync()
         {
+            if (!_mqService.TryGetLatest(out var result)) throw new Exception("No message available.");
+            var userId = result.userId;
+
             var messageList = await _messageContext.Messages
-                .Where(x => x.TargetUserId == targetUserId && x.IsDelivery == false)
+                .Where(x => x.TargetUserId == userId && x.IsDelivery == false)
                 .ToListAsync();
 
-            if (messageList.Count == 0) { throw new Exception("There is no new message"); }
+            if (messageList.Count == 0) throw new Exception("There is no new message");
 
             var listMessage = new List<string>();
 
@@ -42,15 +47,17 @@ namespace Message.Services
             return listMessage;
         }
 
-        public async Task SendMessageAsync(string message, Guid fromUserId, Guid targetUserId)
+        public async Task SendMessageAsync(string message, Guid targetUserId)
         {
-            if (message is null) throw new ArgumentNullException("Message is empty");
+            if (string.IsNullOrWhiteSpace(message)) throw new ArgumentNullException("Message is empty");
+            if (!_mqService.TryGetLatest(out var result)) throw new Exception("No message available.");
+            var userId = result.userId;
 
             var messageDto = new MessageDto()
             {
                 Id = new Guid(),
                 Body = message,
-                FromUserId = fromUserId,
+                FromUserId = userId,
                 TargetUserId = targetUserId,
                 IsDelivery = false
             };
