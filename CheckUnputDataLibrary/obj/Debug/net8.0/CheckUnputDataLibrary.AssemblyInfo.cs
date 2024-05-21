@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Geekbrains")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1+ed358bf4f67a788f0759bfc2f0f4eca6802210d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1+cb7519eb3371b20b8832abe79095e41715a63102")]
 [assembly: System.Reflection.AssemblyProductAttribute("CheckUnputDataLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CheckUnputDataLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.1.0")]
