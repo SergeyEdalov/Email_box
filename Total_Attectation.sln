@@ -17,7 +17,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "ApiGateway\Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolutionTests", "SolutionTests\SolutionTests.csproj", "{494CE8FA-DAAE-4451-8DD2-76916F4CC649}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSATools", "RSATools\RSATools.csproj", "{E85FE238-6817-4E67-9FE3-CE50F37D615F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RSATools", "RSATools\RSATools.csproj", "{E85FE238-6817-4E67-9FE3-CE50F37D615F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{3E149F97-E38E-4E53-9231-9A796FED2E4A}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.config = nuget.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

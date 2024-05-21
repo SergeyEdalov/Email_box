@@ -38,6 +38,19 @@
       "UpstreamPathTemplate": "/Message/{method}",
       "UpsreamHttpMethod": [ "Get", "Post" ],
       "SwaggerKey": "messages"
+    },
+    {
+      "DownstreamPathTemplate": "/RabbitMq/{method}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7191
+        }
+      ],
+      "UpstreamPathTemplate": "/RabbitMq/{method}",
+      "UpsreamHttpMethod": [ "Get", "Post" ],
+      "SwaggerKey": "messages"
     }
   ],
   "GlobalConfiguration": {

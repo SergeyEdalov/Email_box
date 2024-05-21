@@ -1725,7 +1725,7 @@
           "RSATools": "1.0.0",
           "RabbitMQ.Client": "6.8.1",
           "Swashbuckle.AspNetCore": "6.4.0",
-          "TotalAttectation_1": "1.0.2"
+          "TotalAttectation_1": "1.0.3"
         },
         "compile": {
           "bin/placeholder/User.dll": {}

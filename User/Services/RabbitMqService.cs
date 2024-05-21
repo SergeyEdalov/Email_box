@@ -15,18 +15,9 @@ namespace User.Services
 
         public void SendMessage(string message)
         {
-            // Не забудьте вынести значения "localhost" и "MyQueue" в файл конфигурации
             var factory = new ConnectionFactory()
             {
                 HostName = "localhost",
-                //Port = 15672,
-                //UserName = "rabbitMqUserName",
-                //Password = "rabbitMqPassword",
-                //VirtualHost = "rabbitMqVirtualHost",
-                //Ssl =
-                //{
-                //    ServerName = "rabbitMqHostName",
-                //}
             };
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())

@@ -23,7 +23,7 @@
           "RSATools": "1.0.0",
           "RabbitMQ.Client": "6.8.1",
           "Swashbuckle.AspNetCore": "6.4.0",
-          "TotalAttectation_1": "1.0.2"
+          "TotalAttectation_1": "1.0.3"
         },
         "runtime": {
           "User.dll": {}
@@ -1022,14 +1022,14 @@
           }
         }
       },
-      "TotalAttectation_1/1.0.2": {
+      "TotalAttectation_1/1.0.3": {
         "dependencies": {
           "System.IdentityModel.Tokens.Jwt": "7.5.2"
         },
         "runtime": {
           "lib/net8.0/CheckUnputDataLibrary.dll": {
-            "assemblyVersion": "1.0.2.0",
-            "fileVersion": "1.0.2.0"
+            "assemblyVersion": "1.0.3.0",
+            "fileVersion": "1.0.3.0"
           }
         }
       },
@@ -1676,12 +1676,12 @@
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
-    "TotalAttectation_1/1.0.2": {
+    "TotalAttectation_1/1.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-eABdSPi9KyhSfCa+bzfRBc7pji2DHomyd2nHrdMw7MmUQMZ1K1AL0Y8Rtf45tOz8eZoIRF6AZ1JHlRYiHcWctA==",
-      "path": "totalattectation_1/1.0.2",
-      "hashPath": "totalattectation_1.1.0.2.nupkg.sha512"
+      "sha512": "sha512-q2eaDLNL86VKm7hEKxT0iTegTqjQZ+FszsCr42Ae2+XUWnACmQMqdMHyatM1BFhmZq8tEK8dc/XvXAiMwk7zxg==",
+      "path": "totalattectation_1/1.0.3",
+      "hashPath": "totalattectation_1.1.0.3.nupkg.sha512"
     },
     "RSATools/1.0.0": {
       "type": "project",

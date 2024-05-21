@@ -1750,7 +1750,7 @@
           }
         }
       },
-      "TotalAttectation_1/1.0.2": {
+      "TotalAttectation_1/1.0.3": {
         "type": "package",
         "dependencies": {
           "System.IdentityModel.Tokens.Jwt": "7.5.2"
@@ -4737,14 +4737,14 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "TotalAttectation_1/1.0.2": {
-      "sha512": "eABdSPi9KyhSfCa+bzfRBc7pji2DHomyd2nHrdMw7MmUQMZ1K1AL0Y8Rtf45tOz8eZoIRF6AZ1JHlRYiHcWctA==",
+    "TotalAttectation_1/1.0.3": {
+      "sha512": "q2eaDLNL86VKm7hEKxT0iTegTqjQZ+FszsCr42Ae2+XUWnACmQMqdMHyatM1BFhmZq8tEK8dc/XvXAiMwk7zxg==",
       "type": "package",
-      "path": "totalattectation_1/1.0.2",
+      "path": "totalattectation_1/1.0.3",
       "files": [
         ".nupkg.metadata",
         "lib/net8.0/CheckUnputDataLibrary.dll",
-        "totalattectation_1.1.0.2.nupkg.sha512",
+        "totalattectation_1.1.0.3.nupkg.sha512",
         "totalattectation_1.nuspec"
       ]
     },
@@ -4771,7 +4771,7 @@
       "RSATools >= 1.0.0",
       "RabbitMQ.Client >= 6.8.1",
       "Swashbuckle.AspNetCore >= 6.4.0",
-      "TotalAttectation_1 >= 1.0.2"
+      "TotalAttectation_1 >= 1.0.3"
     ]
   },
   "packageFolders": {
@@ -4885,7 +4885,7 @@
           },
           "TotalAttectation_1": {
             "target": "Package",
-            "version": "[1.0.2, )"
+            "version": "[1.0.3, )"
           }
         },
         "imports": [
