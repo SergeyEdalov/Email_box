@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vNO+tKaV1/3tPmsxs1JVSVAAiQd/MlygKp2r7uSUg+RriVTlEBEHQ+vDKqLJM7MLxigiOvNLL40D271l2xk+hA==",
+  "dgSpecHash": "RbdYFPAjz2bJCkQ8TjcdrLl4LZS0eS5R09CS92W9nCMmPIUcxq4ZhU/Jy4umDO1w+SeKjSfk2iSRWdausm/wWw==",
   "success": true,
   "projectFilePath": "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\SolutionTests\\SolutionTests.csproj",
   "expectedPackageFiles": [
@@ -50,6 +50,7 @@
     "C:\\Users\\Серж\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Серж\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.8.0\\microsoft.testplatform.objectmodel.17.8.0.nupkg.sha512",
     "C:\\Users\\Серж\\.nuget\\packages\\microsoft.testplatform.testhost\\17.8.0\\microsoft.testplatform.testhost.17.8.0.nupkg.sha512",
+    "C:\\Users\\Серж\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512",
     "C:\\Users\\Серж\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Серж\\.nuget\\packages\\moq\\4.20.70\\moq.4.20.70.nupkg.sha512",
     "C:\\Users\\Серж\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using RSATools.RSAKeys;
+using RSATools.RSAKeyFolder;
 using User.Abstractions;
 using User.DataBase.Context;
 using User.DataBase.DTO;
@@ -27,6 +27,7 @@ namespace User
 
             builder.Services.AddSwaggerGen(opt =>
             {
+                opt.SwaggerDoc("v1", new OpenApiInfo { Title = "User API", Version = "v1" });
                 opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     In = ParameterLocation.Header,
@@ -77,13 +78,23 @@ namespace User
                         IssuerSigningKey = new RsaSecurityKey(RsaToolsKeys.GetPublicKey())
                     };
                 });
+            builder.WebHost.ConfigureKestrel((context, options) =>
+            {
+                options.ListenAnyIP(7205, listenOptions =>
+                {
+                    listenOptions.UseHttps("/app/aspnetapp.pfx", "Str0ngP@ssw0rd!");
+                });
+            });
 
             var app = builder.Build();
 
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
-                app.UseSwaggerUI();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "User API V1");
+                });
             }
 
             app.UseHttpsRedirection();

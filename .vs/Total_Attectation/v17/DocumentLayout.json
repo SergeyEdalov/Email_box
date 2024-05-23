@@ -3,8 +3,63 @@
   "WorkspaceRootPath": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E149F97-E38E-4E53-9231-9A796FED2E4A}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{3E149F97-E38E-4E53-9231-9A796FED2E4A}|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\nuget.config||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{3E149F97-E38E-4E53-9231-9A796FED2E4A}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{3E149F97-E38E-4E53-9231-9A796FED2E4A}|solutionrelative:nuget.config||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{E85FE238-6817-4E67-9FE3-CE50F37D615F}|RSATools\\RSATools.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\rsatools\\rsakeyfolder\\rsatoolskeys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E85FE238-6817-4E67-9FE3-CE50F37D615F}|RSATools\\RSATools.csproj|solutionrelative:rsatools\\rsakeyfolder\\rsatoolskeys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\user\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|d:\\study_programmist\\\u043A\u0443\u0440\u0441. \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0441#\\total_attectation\\user\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\message\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|solutionrelative:message\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE0AE3B6-250D-4A15-97C6-76708131A5B5}|ApiGateway\\ApiGateway.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\apigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE0AE3B6-250D-4A15-97C6-76708131A5B5}|ApiGateway\\ApiGateway.csproj|solutionrelative:apigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E85FE238-6817-4E67-9FE3-CE50F37D615F}|RSATools\\RSATools.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\rsatools\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E85FE238-6817-4E67-9FE3-CE50F37D615F}|RSATools\\RSATools.csproj|solutionrelative:rsatools\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\user\\user.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\user.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0421\u0435\u0440\u0436\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\build\\Container.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\user\\services\\rabbitmqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610F65D3-614B-4409-AF76-6DE0EF06C301}|User\\User.csproj|solutionrelative:user\\services\\rabbitmqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\message\\rabbitmq\\rabbitmqlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|solutionrelative:message\\rabbitmq\\rabbitmqlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\message\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|solutionrelative:message\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\message\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|solutionrelative:message\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\message\\message.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|solutionrelative:message\\message.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\message\\message.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A10F32BB-7E33-4669-BA08-C61DDE6DD65C}|Message\\Message.csproj|solutionrelative:message\\message.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\user\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:user\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +69,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 181,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,16 +81,186 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "nuget.config",
-              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\nuget.config",
-              "RelativeDocumentMoniker": "nuget.config",
-              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\nuget.config",
-              "RelativeToolTip": "nuget.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-05-21T07:14:13.968Z",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "User\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Properties\\launchSettings.json",
+              "RelativeToolTip": "User\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-23T09:38:00.644Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RsaToolsKeys.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\RSATools\\RSAKeyFolder\\RsaToolsKeys.cs",
+              "RelativeDocumentMoniker": "RSATools\\RSAKeyFolder\\RsaToolsKeys.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\RSATools\\RSAKeyFolder\\RsaToolsKeys.cs",
+              "RelativeToolTip": "RSATools\\RSAKeyFolder\\RsaToolsKeys.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T07:33:58.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\RSATools\\Program.cs",
+              "RelativeDocumentMoniker": "RSATools\\Program.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\RSATools\\Program.cs",
+              "RelativeToolTip": "RSATools\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T13:39:26.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Dockerfile",
+              "RelativeDocumentMoniker": "User\\Dockerfile",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Dockerfile",
+              "RelativeToolTip": "User\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-22T10:51:11.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\User.csproj",
+              "RelativeDocumentMoniker": "User\\User.csproj",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\User.csproj",
+              "RelativeToolTip": "User\\User.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-22T10:00:00.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Container.targets",
+              "DocumentMoniker": "C:\\Users\\\u0421\u0435\u0440\u0436\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\build\\Container.targets",
+              "ToolTip": "C:\\Users\\\u0421\u0435\u0440\u0436\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\build\\Container.targets",
+              "ViewState": "AQIAANAAAAAAAAAAAAAkwAYBAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-05-22T09:49:07.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\ApiGateway\\Program.cs",
+              "RelativeDocumentMoniker": "ApiGateway\\Program.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\ApiGateway\\Program.cs",
+              "RelativeToolTip": "ApiGateway\\Program.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAA4wBYAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T15:05:14.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Message\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Message\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-21T14:48:49.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Message.http",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Message.http",
+              "RelativeDocumentMoniker": "Message\\Message.http",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Message.http",
+              "RelativeToolTip": "Message\\Message.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-05-21T14:48:29.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Program.cs",
+              "RelativeDocumentMoniker": "User\\Program.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Program.cs",
+              "RelativeToolTip": "User\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T13:33:27.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\appsettings.json",
+              "RelativeDocumentMoniker": "Message\\appsettings.json",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\appsettings.json",
+              "RelativeToolTip": "Message\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-21T12:36:38.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RabbitMqService.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Services\\RabbitMqService.cs",
+              "RelativeDocumentMoniker": "User\\Services\\RabbitMqService.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\User\\Services\\RabbitMqService.cs",
+              "RelativeToolTip": "User\\Services\\RabbitMqService.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAIAzwA8AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T10:30:58.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RabbitMqListener.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\RabbitMq\\RabbitMqListener.cs",
+              "RelativeDocumentMoniker": "Message\\RabbitMq\\RabbitMqListener.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\RabbitMq\\RabbitMqListener.cs",
+              "RelativeToolTip": "Message\\RabbitMq\\RabbitMqListener.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAwwCAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T09:43:29.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Program.cs",
+              "RelativeDocumentMoniker": "Message\\Program.cs",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Program.cs",
+              "RelativeToolTip": "Message\\Program.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAswBoAAABgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T09:46:50.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Message.csproj",
+              "DocumentMoniker": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Message.csproj",
+              "RelativeDocumentMoniker": "Message\\Message.csproj",
+              "ToolTip": "D:\\Study_programmist\\\u041A\u0443\u0440\u0441. \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u043D\u0430 \u0421#\\Total_Attectation\\Message\\Message.csproj",
+              "RelativeToolTip": "Message\\Message.csproj",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-21T09:11:21.377Z"
             }
           ]
         },

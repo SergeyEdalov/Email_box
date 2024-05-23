@@ -8,7 +8,7 @@ using Microsoft.OpenApi.Models;
 using Message.RabbitMq;
 using RabbitMQ.Client;
 using Microsoft.IdentityModel.Tokens;
-using RSATools.RSAKeys;
+using RSATools.RSAKeyFolder;
 
 namespace Message
 {
@@ -61,7 +61,7 @@ namespace Message
 
             builder.Services.AddSingleton<IConnectionFactory>(sp => new ConnectionFactory
             {
-                Endpoint = new AmqpTcpEndpoint(new Uri("amqp://localhost")),
+                HostName = "rabbitmq",
                 DispatchConsumersAsync = true,
             });
             builder.Services.AddSingleton<IRabbitMqService<string, Guid>, RabbitMqService>();
@@ -96,6 +96,13 @@ namespace Message
                     };
                 });
             builder.Services.AddAuthorization();
+            builder.WebHost.ConfigureKestrel((context, options) =>
+            {
+                options.ListenAnyIP(7191, listenOptions =>
+                {
+                    listenOptions.UseHttps("/app/aspnetapp.pfx", "Str0ngP@ssw0rd!");
+                });
+            });
 
             var app = builder.Build();
 

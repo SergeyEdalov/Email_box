@@ -5,8 +5,8 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using CheckUnputDataLibrary;
-using RSATools.RSAKeys;
 using Message.Abstractions;
+using RSATools.RSAKeyFolder;
 
 namespace Message.RabbitMq
 {

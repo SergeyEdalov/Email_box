@@ -1,13 +1,15 @@
-﻿FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
+COPY certificates/aspnetapp.pfx .
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
-WORKDIR /app
-COPY *.csproj ./
-RUN dotnet restore
-COPY . ./
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["ApiGateway/ApiGateway.csproj", "ApiGateway/"]
+RUN dotnet restore "ApiGateway/ApiGateway.csproj"
+WORKDIR "/src/ApiGateway"
+COPY ApiGateway/. .
 RUN dotnet build "ApiGateway.csproj" -c Release -o /app/build
 
 FROM build AS publish

@@ -1,6 +1,4 @@
-﻿using RSATools.RSAKeys;
-
-namespace RSATools
+﻿namespace RSATools
 {
     internal class Program
     {

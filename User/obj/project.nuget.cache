@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WfQpxAZoUThleXsOHuf+KdwLNvsfbMOYo4YS9yiM71fhrWIAcLKfdd3zFLLnTmX3y1pZ+ikI9Ii1DRt6z4EH5w==",
+  "dgSpecHash": "dRLW54FaRxifSqQyhLI0JuABDd/kIl/czmRWa1fB7MhtbbXJ4c9e3mipD8qZONv8x6ASonq4K6GgtUiMSR3Kvg==",
   "success": true,
   "projectFilePath": "D:\\Study_programmist\\Курс. Разработка веб-приложения на С#\\Total_Attectation\\User\\User.csproj",
   "expectedPackageFiles": [
@@ -52,6 +52,7 @@
     "C:\\Users\\Серж\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.5.2\\microsoft.identitymodel.tokens.7.5.2.nupkg.sha512",
     "C:\\Users\\Серж\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
     "C:\\Users\\Серж\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "C:\\Users\\Серж\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512",
     "C:\\Users\\Серж\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Серж\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\Серж\\.nuget\\packages\\npgsql\\8.0.2\\npgsql.8.0.2.nupkg.sha512",
