@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:15672"]
+      interval: 20s
+      timeout: 10s
+      retries: 5
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+    ports:
+      - "5432:5432"  
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 30s
+      timeout: 10s
+      retries: 5    
+  adminer:
+    image: adminer
+    restart: always
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+    ports:
+      - 8080:8080
+  usersapi:
+    build:
+      context: .
+      dockerfile: User/Dockerfile
+    ports:
+      - 7205:7205
+    depends_on:
+      - rabbitmq
+      - db
+    environment:
+      - RABBITMQ__HOST=rabbitmq
+      - ASPNETCORE_URLS=https://0.0.0.0:7205
+  messagesapi:
+    build:
+      context: .
+      dockerfile: Message/Dockerfile
+    ports:
+      - 7191:7191
+    depends_on:
+      - rabbitmq
+      - db
+    environment:
+      - RABBITMQ__HOST=rabbitmq
+      - ASPNETCORE_URLS=https://0.0.0.0:7191
+  apigateway:
+    build:
+      context: .
+      dockerfile: ApiGateway/Dockerfile
+    ports:
+      - 7052:7052
+    environment:
+      - ASPNETCORE_URLS=https://0.0.0.0:7052
+
+volumes:
+  rabbitmq_data:
+  postgres_data:

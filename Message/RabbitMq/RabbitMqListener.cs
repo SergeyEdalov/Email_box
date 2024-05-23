@@ -5,8 +5,8 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using CheckUnputDataLibrary;
-using RSATools.RSAKeys;
 using Message.Abstractions;
+using RSATools.RSAKeyFolder;
 
 namespace Message.RabbitMq
 {
@@ -26,7 +26,6 @@ namespace Message.RabbitMq
             _connectionFactory = connectionFactory;
             _logger = logger;
             _rabbitMqService = rabbitMqService;
-            // Не забудьте вынести значения "localhost" и "MyQueue" в файл конфигурации
         }
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)

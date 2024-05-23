@@ -18,6 +18,13 @@ namespace ApiGateway
 
             builder.Services.AddOcelot(configuration);
             builder.Services.AddSwaggerForOcelot(configuration);
+            builder.WebHost.ConfigureKestrel((context, options) =>
+            {
+                options.ListenAnyIP(7052, listenOptions =>
+                {
+                    listenOptions.UseHttps("/app/aspnetapp.pfx", "Str0ngP@ssw0rd!");
+                });
+            });
 
             var app = builder.Build();
 

@@ -1,6 +1,6 @@
 ﻿using System.Security.Cryptography;
 
-namespace RSATools.RSAKeys
+namespace RSATools.RSAKeyFolder
 {
     public static class RsaToolsKeys
     {
@@ -24,10 +24,21 @@ namespace RSATools.RSAKeys
 
         private static string GetPathKeys()
         {
-            var directory = Directory.GetCurrentDirectory();
-            var path = directory.Substring(0, directory.IndexOf("Total_Attectation"));
-            path = Path.Combine(path, "Total_Attectation\\RSATools\\RSAKeys");
-            return path;
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+            var directoryInfo = new DirectoryInfo(baseDirectory);
+
+            while (directoryInfo != null)
+            {
+                var rsaKeysDirectory = Path.Combine(directoryInfo.FullName, "RSATools", "RSAKeyFolder");
+
+                if (Directory.Exists(rsaKeysDirectory))
+                {
+                    return rsaKeysDirectory;
+                }
+                directoryInfo = directoryInfo.Parent;
+            }
+            throw new DirectoryNotFoundException("Directory RSATools/RSAKeyFolder not found.");
         }
     }
 }
